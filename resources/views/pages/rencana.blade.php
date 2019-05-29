@@ -83,7 +83,7 @@
                                     <!-- END Step 1 -->
         
                                     <!-- Step 2 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                    <div class="tab-pane" id="wizard-validation-material-step2" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
                                                 <input class="form-control valid" type="text" id="wizard-validation-material-scope2" name="wizard-validation-material-scope2" aria-describedby="wizard-validation-material-scope2-error" aria-invalid="false">
@@ -118,7 +118,7 @@
                                     <!-- END Step 2 -->
         
                                     <!-- Step 3 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                    <div class="tab-pane" id="wizard-validation-material-step3" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
                                                 <input class="form-control valid" type="text" id="wizard-validation-material-scope3" name="wizard-validation-material-scope3" aria-describedby="wizard-validation-material-scope3-error" aria-invalid="false">
@@ -153,7 +153,7 @@
                                     <!-- END Step 3 -->
 
                                     <!-- Step 4 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                    <div class="tab-pane" id="wizard-validation-material-step4" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
                                                 <input class="form-control valid" type="text" id="wizard-validation-material-scope4" name="wizard-validation-material-scope4" aria-describedby="wizard-validation-material-scope4-error" aria-invalid="false">
@@ -188,7 +188,7 @@
                                     <!-- END Step 4 -->
 
                                     <!-- Step 5 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                    <div class="tab-pane" id="wizard-validation-material-step5" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
                                                 <input class="form-control valid" type="text" id="wizard-validation-material-scope5" name="wizard-validation-material-scope5" aria-describedby="wizard-validation-material-scope5-error" aria-invalid="false">
