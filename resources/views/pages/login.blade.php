@@ -84,6 +84,6 @@
         <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
 
         <!-- Page JS Code -->
-        <script src="{{asset('assets/codebase/assets/js/pages/signin.js')}}"></script>
+        <script src="{{asset('js/signin.js')}}"></script>
     </body>
 </html>
