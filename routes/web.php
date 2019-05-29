@@ -23,6 +23,10 @@ Route::get('/rencana', function () {
 	return view('pages.rencana');
 });
 
-Route::get('/rencana2', function () {
-	return view('rencana');
+Route::get('/agenda', function () {
+	return view('pages.agenda');
+});
+
+Route::get('/createagenda', function () {
+	return view('pages.createagenda');
 });
