@@ -51,14 +51,14 @@
                                     <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope1" name="wizard-validation-material-scope1" aria-describedby="wizard-validation-material-scope1-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-scope1">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-content1" name="wizard-validation-material-content1" aria-describedby="wizard-validation-material-content1-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-content1">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -75,8 +75,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks1" name="wizard-validation-material-remaks1" aria-describedby="wizard-validation-material-remaks1-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-remaks1">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
@@ -86,14 +86,14 @@
                                     <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope2" name="wizard-validation-material-scope2" aria-describedby="wizard-validation-material-scope2-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-scope2">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-content2" name="wizard-validation-material-content2" aria-describedby="wizard-validation-material-content2-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-content2">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -110,8 +110,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks2" name="wizard-validation-material-remaks2" aria-describedby="wizard-validation-material-remaks2-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-remaks2">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
@@ -121,14 +121,14 @@
                                     <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope3" name="wizard-validation-material-scope3" aria-describedby="wizard-validation-material-scope3-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-scope3">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-content3" name="wizard-validation-material-content3" aria-describedby="wizard-validation-material-content3-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-content3">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -145,8 +145,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks3" name="wizard-validation-material-remaks3" aria-describedby="wizard-validation-material-remaks3-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-remaks3">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
@@ -156,14 +156,14 @@
                                     <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope4" name="wizard-validation-material-scope4" aria-describedby="wizard-validation-material-scope4-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-scope4">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-content4" name="wizard-validation-material-content4" aria-describedby="wizard-validation-material-content4-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-content4">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -180,8 +180,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks4" name="wizard-validation-material-remaks4" aria-describedby="wizard-validation-material-remaks4-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-remaks4">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
@@ -191,14 +191,14 @@
                                     <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope5" name="wizard-validation-material-scope5" aria-describedby="wizard-validation-material-scope5-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-scope5">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-content5" name="wizard-validation-material-content5" aria-describedby="wizard-validation-material-content5-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-content5">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -215,8 +215,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks5" name="wizard-validation-material-remaks5" aria-describedby="wizard-validation-material-remaks5-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-remaks5">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
@@ -266,7 +266,8 @@
         <script src="assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
 
         <!-- Page JS Code -->
-        <script src="assets/codebase/assets/js/pages/be_forms_wizard.js"></script>
+        <script src="js/rencana.js"></script>
+        <script type="assets/codebase/assets/js/pages/be_forms_wizard.js"></script>
         <script>
             jQuery(function () {
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
