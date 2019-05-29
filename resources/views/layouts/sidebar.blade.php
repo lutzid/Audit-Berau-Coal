@@ -16,7 +16,7 @@
             <div class="content-side content-side-full">
                 <ul class="nav-main">
                     <li class="table">
-                        <a href="#"><i class="si si-calendar"></i><span class="sidebar-mini-hide font-size-md">Rencana Audit Tahunan</span></a>
+                        <a href="/rencana"><i class="si si-calendar"></i><span class="sidebar-mini-hide font-size-md">Rencana Audit Tahunan</span></a>
                     </li>
                     <li class="table">
                         <a href="#"><i class="si si-list"></i><span class="sidebar-mini-hide font-size-md">Agenda Audit</span></a>

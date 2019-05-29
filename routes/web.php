@@ -22,3 +22,7 @@ Route::post('/dashboard', function () {
 Route::get('/rencana', function () {
 	return view('pages.rencana');
 });
+
+Route::get('/rencana2', function () {
+	return view('rencana');
+});

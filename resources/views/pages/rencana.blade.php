@@ -29,7 +29,7 @@
                                     <a class="nav-link" href="#wizard-validation-material-step1" data-toggle="tab">ISPS Code</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active show" href="#wizard-validation-material-step2" data-toggle="tab">K3L Spesial Audit</a>
+                                    <a class="nav-link" href="#wizard-validation-material-step2" data-toggle="tab">K3L Spesial Audit</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#wizard-validation-material-step3" data-toggle="tab">K3L Semester 1</a>
@@ -63,14 +63,14 @@
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker1" name="example-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker1">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker1" name="end-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="end-datepicker1">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
@@ -98,14 +98,14 @@
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker2" name="example-datepicker2" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker2">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker2" name="end-datepicker2" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="end-datepicker2">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
@@ -133,14 +133,14 @@
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="example-datepicker3" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker3">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker3" name="end-datepicker3" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="end-datepicker3">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
@@ -174,8 +174,8 @@
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker4" name="end-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="end-datepicker4">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
@@ -203,14 +203,14 @@
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker5" name="example-datepicker5" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker5">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker5" name="end-datepicker5" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="end-datepicker5">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
