@@ -118,7 +118,7 @@
                         <a class="font-w600" href="https://goo.gl/po9Usv" target="_blank">Codebase 2.0</a> &copy; <span class="js-year-copy">2017</span>
                     </div>
                 </div> -->
-                <a class="font-w600" href="https://goo.gl/po9Usv">Tentang kita</a>
+                <!-- <a class="font-w600" href="https://goo.gl/po9Usv">Tentang kita</a> -->
             </footer>
             <!-- END Footer -->
         </div>

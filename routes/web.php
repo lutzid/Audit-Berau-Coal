@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.login');
+});
+
+Route::post('/dashboard', function () {
+    return view('pages.home');
 });
 
 Route::get('/rencana', function () {

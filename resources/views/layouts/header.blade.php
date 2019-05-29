@@ -27,7 +27,7 @@
 
 <!-- Stylesheets -->
 <link rel="stylesheet" id="css-main" href="{{asset('assets/codebase/assets/css/codebase.min.css')}}">
-<link rel="stylesheet" id="css-theme" href="{{asset('assets/codebase/assets/css/themes/pulse.min.css')}}">
+<link rel="stylesheet" id="css-theme" href="{{asset('assets/codebase/assets/css/themes/earth.min.css')}}">
 <!-- END Stylesheets -->
 
 
@@ -40,9 +40,3 @@
 <script src="{{asset('assets/codebase/assets/js/core/jquery.countTo.min.js')}}"></script>
 <script src="{{asset('assets/codebase/assets/js/core/js.cookie.min.js')}}"></script>
 <script src="{{asset('assets/codebase/assets/js/codebase.js')}}"></script>
-
-<!-- Page JS Plugins -->
-<script src="{{asset('assets/codebase/assets/js/plugins/chartjs/Chart.bundle.min.js')}}"></script>
-
-<!-- Page JS Code -->
-<script src="{{asset('assets/codebase/assets/js/pages/be_pages_dashboard.js')}}"></script>
