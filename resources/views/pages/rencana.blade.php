@@ -18,9 +18,10 @@
             <!-- END Header -->
 
             <!-- Main Container -->
-            <main id="main-container">
+            <main id="main-container">  
                 <div class="content">
-
+                    <h2 class="content-heading font-w700">Rencana Audit Tahunan</h2>
+                    <div class="block">
                         <!-- Validation Wizard Material -->
                         <div class="js-wizard-validation-material block">
                             <!-- Step Tabs -->
@@ -44,7 +45,7 @@
                             <!-- END Step Tabs -->
         
                             <!-- Form -->
-                            <form class="js-wizard-validation-material-form" action="be_forms_wizard.html" method="post" novalidate="novalidate">
+                            <form class="js-wizard-validation-material-form" action="#" method="post" novalidate="novalidate">
                                 <!-- Steps Content -->
                                 <div class="block-content block-content-full tab-content" style="min-height: 267px;">
                                     <!-- Step 1 -->
@@ -247,6 +248,7 @@
                             <!-- END Form -->
                         </div>
                         <!-- END Validation Wizard 2 -->
+                    </div>
                 </div>
             </main>
             <!-- END Main Container -->
@@ -258,7 +260,6 @@
             <!-- END Footer -->
         </div>
         <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-        <script src="assets/codebase/assets/js/pages/be_forms_plugins.js"></script>
 
         <!-- Page JS Plugins -->
         <script src="assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
@@ -267,13 +268,6 @@
 
         <!-- Page JS Code -->
         <script src="js/rencana.js"></script>
-        <script type="assets/codebase/assets/js/pages/be_forms_wizard.js"></script>
-        <script>
-            jQuery(function () {
-                // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
-                Codebase.helpers(['datepicker', 'colorpicker', 'maxlength', 'select2', 'masked-inputs', 'rangeslider', 'tags-inputs']);
-            });
-        </script>
 
     </body>
 </html>

@@ -16,28 +16,28 @@
             <div class="content-side content-side-full">
                 <ul class="nav-main">
                     <li class="table">
-                        <a href="/rencana"><i class="si si-calendar"></i><span class="sidebar-mini-hide font-size-md">Rencana Audit Tahunan</span></a>
+                        <a href="/rencana"><i class="si si-calendar"></i><span class="sidebar-mini-hide font-size-sm">Rencana Audit Tahunan</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-list"></i><span class="sidebar-mini-hide font-size-md">Agenda Audit</span></a>
+                        <a href="/agenda"><i class="si si-list"></i><span class="sidebar-mini-hide font-size-sm">Agenda Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-md">Checklist Audit</span></a>
+                        <a href="#"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Checklist Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-md">Laporan Audit</span></a>
+                        <a href="#"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Laporan Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-docs"></i><span class="sidebar-mini-hide font-size-md">PLOR Audit</span></a>
+                        <a href="#"><i class="si si-docs"></i><span class="sidebar-mini-hide font-size-sm">PLOR Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-screen-desktop"></i><span class="sidebar-mini-hide font-size-md">Monitoring Hasil Audit</span></a>
+                        <a href="#"><i class="si si-screen-desktop"></i><span class="sidebar-mini-hide font-size-sm">Monitoring Hasil Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-md">Evaluasi Audit K3L</span></a>
+                        <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-sm">Evaluasi Audit K3L</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-md">Surat dan IM</span></a>
+                        <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-sm">Surat dan IM</span></a>
                     </li>
                 </ul>
 
