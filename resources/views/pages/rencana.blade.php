@@ -2,6 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
+        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">
@@ -24,13 +26,19 @@
                             <!-- Step Tabs -->
                             <ul class="nav nav-tabs nav-tabs-alt nav-fill" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step1" data-toggle="tab">1. Personal</a>
+                                    <a class="nav-link" href="#wizard-validation-material-step1" data-toggle="tab">ISPS Code</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active show" href="#wizard-validation-material-step2" data-toggle="tab">2. Details</a>
+                                    <a class="nav-link active show" href="#wizard-validation-material-step2" data-toggle="tab">K3L Spesial Audit</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step3" data-toggle="tab">3. Extra</a>
+                                    <a class="nav-link" href="#wizard-validation-material-step3" data-toggle="tab">K3L Semester 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#wizard-validation-material-step4" data-toggle="tab">K3L Semester 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#wizard-validation-material-step5" data-toggle="tab">Audit SIAP</a>
                                 </li>
                             </ul>
                             <!-- END Step Tabs -->
@@ -44,63 +52,175 @@
                                         <div class="form-group">
                                             <div class="form-material floating open">
                                                 <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-firstname">First Name</label>
+                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-material floating open">
                                                 <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-lastname">Last Name</label>
+                                                <label for="wizard-validation-material-lastname">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">From</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">To</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
                                             <div class="form-material floating open">
-                                                <input class="form-control valid" type="email" id="wizard-validation-material-email" name="wizard-validation-material-email" aria-describedby="wizard-validation-material-email-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-email">Email</label>
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 1 -->
         
                                     <!-- Step 2 -->
-                                    <div class="tab-pane active show" id="wizard-validation-material-step2" role="tabpanel">
+                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating">
-                                                <textarea class="form-control" id="wizard-validation-material-bio" name="wizard-validation-material-bio" rows="9"></textarea>
-                                                <label for="wizard-validation-material-bio">Bio</label>
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">From</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">To</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 2 -->
         
                                     <!-- Step 3 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step3" role="tabpanel">
+                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating">
-                                                <input class="form-control" type="text" id="wizard-validation-material-location" name="wizard-validation-material-location">
-                                                <label for="wizard-validation-material-location">Location</label>
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating">
-                                                <select class="form-control" id="wizard-validation-material-skills" name="wizard-validation-material-skills" size="1">
-                                                    <option></option><!-- Empty value for demostrating material select box -->
-                                                    <option value="1">Photoshop</option>
-                                                    <option value="2">HTML</option>
-                                                    <option value="3">CSS</option>
-                                                    <option value="4">JavaScript</option>
-                                                </select>
-                                                <label for="wizard-validation-material-skills">Skills</label>
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="css-control css-control-primary css-switch" for="wizard-validation-material-terms">
-                                                <input type="checkbox" class="css-control-input" id="wizard-validation-material-terms" name="wizard-validation-material-terms">
-                                                <span class="css-control-indicator"></span> Agree with the terms
-                                            </label>
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">From</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">To</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- END Step 3 -->
+
+                                    <!-- Step 4 -->
+                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">From</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">To</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Step 4 -->
+
+                                    <!-- Step 5 -->
+                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname" aria-describedby="wizard-validation-material-firstname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-firstname">Audit Scope</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Audit Content</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">From</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="form-material floating open">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <label for="example-datepicker4">To</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-material floating open">
+                                                <input class="form-control valid" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname" aria-describedby="wizard-validation-material-lastname-error" aria-invalid="false">
+                                                <label for="wizard-validation-material-lastname">Remaks</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Step 5 -->
                                 </div>
                                 <!-- END Steps Content -->
         
@@ -137,5 +257,22 @@
             </footer>
             <!-- END Footer -->
         </div>
+        <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/codebase/assets/js/pages/be_forms_plugins.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+        <script src="assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script src="assets/codebase/assets/js/pages/be_forms_wizard.js"></script>
+        <script>
+            jQuery(function () {
+                // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+                Codebase.helpers(['datepicker', 'colorpicker', 'maxlength', 'select2', 'masked-inputs', 'rangeslider', 'tags-inputs']);
+            });
+        </script>
+
     </body>
 </html>
