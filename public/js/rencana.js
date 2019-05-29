@@ -65,6 +65,66 @@ var BeFormWizard = function() {
                 jQuery(e).remove();
             },
             rules: {
+                'wizard-validation-classic-scope1': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-content1': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-remaks1': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-scope2': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-content2': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-remaks2': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-scope3': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-content3': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-remaks3': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-scope4': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-content4': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-remaks4': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-scope5': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-content5': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-classic-remaks5': {
+                    required: true,
+                    minlength: 2
+                },
                 'wizard-validation-classic-firstname': {
                     required: true,
                     minlength: 2
@@ -174,6 +234,66 @@ var BeFormWizard = function() {
                 jQuery(e).remove();
             },
             rules: {
+                'wizard-validation-material-scope1': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-content1': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-remaks1': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-scope2': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-content2': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-remaks2': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-scope3': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-content3': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-remaks3': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-scope4': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-content4': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-remaks4': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-scope5': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-content5': {
+                    required: true,
+                    minlength: 2
+                },
+                'wizard-validation-material-remaks5': {
+                    required: true,
+                    minlength: 2
+                },
                 'wizard-validation-material-firstname': {
                     required: true,
                     minlength: 2
