@@ -30,3 +30,15 @@ Route::get('/agenda', function () {
 Route::get('/createagenda', function () {
 	return view('pages.createagenda');
 });
+
+Route::get('/laporanfull', function () {
+	return view('pages.laporanfull');
+});
+
+Route::get('/laporanlimit', function () {
+	return view('pages.laporanlimit');
+});
+
+Route::get('/checklist', function () {
+	return view('pages.checklist');
+});
