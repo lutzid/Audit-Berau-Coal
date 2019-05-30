@@ -22,10 +22,10 @@
                         <a href="/agenda"><i class="si si-list"></i><span class="sidebar-mini-hide font-size-sm">Agenda Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Checklist Audit</span></a>
+                        <a href="/checklist"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Checklist Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Laporan Audit</span></a>
+                        <a href="/laporanfull"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Laporan Audit</span></a>
                     </li>
                     <li class="table">
                         <a href="#"><i class="si si-docs"></i><span class="sidebar-mini-hide font-size-sm">PLOR Audit</span></a>

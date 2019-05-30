@@ -268,6 +268,12 @@
 
         <!-- Page JS Code -->
         <script src="js/rencana.js"></script>
+        <script>
+            jQuery(function () {
+                // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+                Codebase.helpers(['datepicker', 'colorpicker', 'maxlength', 'select2', 'masked-inputs', 'rangeslider', 'tags-inputs']);
+            });
+        </script>
 
     </body>
 </html>
