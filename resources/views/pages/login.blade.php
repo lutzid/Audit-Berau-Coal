@@ -10,6 +10,11 @@
         <div id="page-container" class="main-content-boxed">
             <!-- Main Container -->
             <main id="main-container">
+            @if (\Session::has('error'))
+                <div class="alert alert-danger">
+                    {!! \Session::get('error') !!}
+                </div>
+            @endif
                 <!-- Page Content -->
                 <div class="bg-image" style="background-image: url('img/bglogin.jpg');">
                     <div class="row mx-0 bg-black-op">
@@ -38,7 +43,7 @@
                                 <!-- Sign In Form -->
                                 <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.js) -->
                                 <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                <form class="js-validation-signin px-30" action="{{url('dashboard')}}" method="post">
+                                <form class="js-validation-signin px-30" action="{{url('post_user')}}" method="post">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-12">

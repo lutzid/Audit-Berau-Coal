@@ -1,22 +1,42 @@
 <!-- Header Content -->
 <div class="content-header">
     <!-- Left Section -->
-    <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
-        <i class="fa fa-navicon"></i>
-    </button>
+    <div class="content-header-section">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
+                    <i class="fa fa-navicon"></i>
+                </button>
+            </li>
+            
+        </ul>
+    </div>
     <!-- END Left Section -->
 
     <!-- Middle Section -->
+    <div class="content-header-section">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#"><img class="img-fluid" src="{{url('img/berauwhite.png')}}"></a>
+            </li>
+        </ul>
+    </div>
     <!-- END Middle Section -->
 
     <!-- Right Section -->
     <div class="content-header-section">
-        <!-- Color Themes + A few of the many header options (used just for demonstration) -->
-        <!-- Themes functionality initialized in Cosdebase() -> uiHandleTheme() -->
-        <!-- END Color Themes + A few of the many header options -->
-        <div class="content-header-section">
-            <a href="/"><img class="img-fluid" src="{{url('img/berauwhite.png')}}"></a>
-        </div>
+        <ul class="nav nav-tabs">
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{Session('user')->username}}</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/">Sign Out</a>
+                </div>
+            </li>
+        </ul>
+
         <!-- END Toggle Sidebar -->
     </div>
     <!-- END Right Section -->

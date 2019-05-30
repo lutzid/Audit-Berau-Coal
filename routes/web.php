@@ -11,11 +11,13 @@
 |
 */
 
+Route::post('/post_user', 'TestController@loginUser');
+
 Route::get('/', function () {
     return view('pages.login');
 });
 
-Route::post('/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('pages.home');
 });
 
