@@ -259,15 +259,20 @@
             </footer>
             <!-- END Footer -->
         </div>
-        <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
         <!-- Page JS Plugins -->
-        <script src="assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
-        <script src="assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-        <script src="assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
+        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js')}}"></script>
+        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js')}}"></script>
 
         <!-- Page JS Code -->
-        <script src="js/rencana.js"></script>
+        <script src="{{asset('js/rencana.js')}}"></script>
+        <script>
+            jQuery(function () {
+                Codebase.helpers(['datepicker']);
+            });
+        </script>
 
     </body>
 </html>

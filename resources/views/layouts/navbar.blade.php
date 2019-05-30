@@ -15,7 +15,7 @@
         <!-- Themes functionality initialized in Cosdebase() -> uiHandleTheme() -->
         <!-- END Color Themes + A few of the many header options -->
         <div class="content-header-section">
-            <img class="img-fluid" src="{{url('img/berauwhite.png')}}">
+            <a href="/"><img class="img-fluid" src="{{url('img/berauwhite.png')}}"></a>
         </div>
         <!-- END Toggle Sidebar -->
     </div>
