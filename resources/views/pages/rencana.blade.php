@@ -27,201 +27,203 @@
                             <!-- Step Tabs -->
                             <ul class="nav nav-tabs nav-tabs-alt nav-fill" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step1" data-toggle="tab">ISPS Code</a>
+                                    <a class="nav-link" href="#isps" data-toggle="tab">ISPS Code Audit</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step2" data-toggle="tab">K3L Spesial Audit</a>
+                                    <a class="nav-link" href="#special" data-toggle="tab">Special Audit</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step3" data-toggle="tab">K3L Semester 1</a>
+                                    <a class="nav-link" href="#smt1" data-toggle="tab">Audit Semester 1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step4" data-toggle="tab">K3L Semester 2</a>
+                                    <a class="nav-link" href="#smt2" data-toggle="tab">Audit Semester 2</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#wizard-validation-material-step5" data-toggle="tab">Audit SIAP</a>
+                                    <a class="nav-link" href="#siap" data-toggle="tab">SIAP Audit</a>
                                 </li>
                             </ul>
                             <!-- END Step Tabs -->
         
                             <!-- Form -->
-                            <form class="js-wizard-validation-material-form" action="#" method="post" novalidate="novalidate">
+                            <form class="js-wizard-validation-material-form" action="{{url('post_rencana')}}" method="post" novalidate="novalidate">
+                                @csrf
                                 <!-- Steps Content -->
                                 <div class="block-content block-content-full tab-content" style="min-height: 267px;">
                                     <!-- Step 1 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step1" role="tabpanel">
+                                    <div class="tab-pane" id="isps" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope1" name="wizard-validation-material-scope1" aria-describedby="wizard-validation-material-scope1-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-scope1">Audit Scope</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="isps-scope" name="isps-scope" aria-describedby="isps-scope-error" aria-invalid="false">
+                                                <label for="isps-scope">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-content1" name="wizard-validation-material-content1" aria-describedby="wizard-validation-material-content1-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-content1">Audit Content</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="isps-content" name="isps-content" aria-describedby="isps-content-error" aria-invalid="false">
+                                                <label for="isps-content">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker1" name="example-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker1">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="isps-from" name="isps-from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="isps-from">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker1" name="end-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="end-datepicker1">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="isps-to" name="isps-to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="isps-to">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks1" name="wizard-validation-material-remaks1" aria-describedby="wizard-validation-material-remaks1-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-remaks1">Remaks</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="isps-remaks" name="isps-remaks" aria-describedby="isps-remaks-error" aria-invalid="false">
+                                                <label for="isps-remaks">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 1 -->
-        
+
                                     <!-- Step 2 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step2" role="tabpanel">
+                                    <div class="tab-pane" id="special" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope2" name="wizard-validation-material-scope2" aria-describedby="wizard-validation-material-scope2-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-scope2">Audit Scope</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="special-scope" name="special-scope" aria-describedby="special-scope-error" aria-invalid="false">
+                                                <label for="special-scope">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-content2" name="wizard-validation-material-content2" aria-describedby="wizard-validation-material-content2-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-content2">Audit Content</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="special-content" name="special-content" aria-describedby="special-content-error" aria-invalid="false">
+                                                <label for="special-content">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker2" name="example-datepicker2" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker2">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="special-from" name="special-from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="special-from">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker2" name="end-datepicker2" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="end-datepicker2">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="special-to" name="special-to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="special-to">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks2" name="wizard-validation-material-remaks2" aria-describedby="wizard-validation-material-remaks2-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-remaks2">Remaks</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="special-remaks" name="special-remaks" aria-describedby="special-remaks-error" aria-invalid="false">
+                                                <label for="special-remaks">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 2 -->
-        
+
                                     <!-- Step 3 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step3" role="tabpanel">
+                                    <div class="tab-pane" id="smt1" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope3" name="wizard-validation-material-scope3" aria-describedby="wizard-validation-material-scope3-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-scope3">Audit Scope</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="smt1-scope" name="smt1-scope" aria-describedby="smt1-scope-error" aria-invalid="false">
+                                                <label for="smt1-scope">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-content3" name="wizard-validation-material-content3" aria-describedby="wizard-validation-material-content3-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-content3">Audit Content</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="smt1-content" name="smt1-content" aria-describedby="smt1-content-error" aria-invalid="false">
+                                                <label for="smt1-content">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="example-datepicker3" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker3">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="smt1-from" name="smt1-from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="smt1-from">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker3" name="end-datepicker3" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="end-datepicker3">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="smt1-to" name="smt1-to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="smt1-to">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks3" name="wizard-validation-material-remaks3" aria-describedby="wizard-validation-material-remaks3-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-remaks3">Remaks</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="smt1-remaks" name="smt1-remaks" aria-describedby="smt1-remaks-error" aria-invalid="false">
+                                                <label for="smt1-remaks">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 3 -->
 
                                     <!-- Step 4 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step4" role="tabpanel">
+                                    <div class="tab-pane" id="smt2" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope4" name="wizard-validation-material-scope4" aria-describedby="wizard-validation-material-scope4-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-scope4">Audit Scope</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="smt2-scope" name="smt2-scope" aria-describedby="smt2-scope-error" aria-invalid="false">
+                                                <label for="smt2-scope">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-content4" name="wizard-validation-material-content4" aria-describedby="wizard-validation-material-content4-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-content4">Audit Content</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="smt2-content" name="smt2-content" aria-describedby="smt2-content-error" aria-invalid="false">
+                                                <label for="smt2-content">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker4" name="example-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker4">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="smt2-from" name="smt2-from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="smt2-from">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker4" name="end-datepicker4" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="end-datepicker4">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="smt2-to" name="smt2-to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="smt2-to">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks4" name="wizard-validation-material-remaks4" aria-describedby="wizard-validation-material-remaks4-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-remaks4">Remaks</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="smt2-remaks" name="smt2-remaks" aria-describedby="smt2-remaks-error" aria-invalid="false">
+                                                <label for="smt2-remaks">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 4 -->
 
                                     <!-- Step 5 -->
-                                    <div class="tab-pane" id="wizard-validation-material-step5" role="tabpanel">
+                                    <div class="tab-pane" id="siap" role="tabpanel">
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-scope5" name="wizard-validation-material-scope5" aria-describedby="wizard-validation-material-scope5-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-scope5">Audit Scope</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="siap-scope" name="siap-scope" aria-describedby="siap-scope-error" aria-invalid="false">
+                                                <label for="siap-scope">Audit Scope</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-content5" name="wizard-validation-material-content5" aria-describedby="wizard-validation-material-content5-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-content5">Audit Content</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="siap-content" name="siap-content" aria-describedby="siap-content-error" aria-invalid="false">
+                                                <label for="siap-content">Audit Content</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker5" name="example-datepicker5" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="example-datepicker5">From</label>
+                                                    <input type="text" class="js-datepicker form-control" id="siap-from" name="siap-from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="siap-from">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker5" name="end-datepicker5" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                                    <label for="end-datepicker5">To</label>
+                                                    <input type="text" class="js-datepicker form-control" id="siap-to" name="siap-to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                                    <label for="siap-to">To</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="form-material floating open">
-                                                <input class="form-control valid" type="text" id="wizard-validation-material-remaks5" name="wizard-validation-material-remaks5" aria-describedby="wizard-validation-material-remaks5-error" aria-invalid="false">
-                                                <label for="wizard-validation-material-remaks5">Remaks</label>
+                                            <div class="form-material floating">
+                                                <input class="form-control valid" type="text" id="siap-remaks" name="siap-remaks" aria-describedby="siap-remaks-error" aria-invalid="false">
+                                                <label for="siap-remaks">Remaks</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- END Step 5 -->
+        
                                 </div>
                                 <!-- END Steps Content -->
         
@@ -264,7 +266,6 @@
         <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
         <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js')}}"></script>
         <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('js/rencana.js')}}"></script>

@@ -39,6 +39,23 @@ var BeFormWizard = function() {
         // Get forms
         var formMaterial    = jQuery('.js-wizard-validation-material-form');
 
+        // Prevent forms from submitting on enter key press
+        // formClassic.on('keyup keypress', function (e) {
+        //     var code = e.keyCode || e.which;
+
+        //     if (code === 13) {
+        //         e.preventDefault();
+        //         return false;
+        //     }
+        // });
+        $(document).ready(function() {
+            $(window).keydown(function(event){
+              if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+              }
+            });
+          });
         // Init form validation on material wizard form
         var validatorMaterial = formMaterial.validate({
             errorClass: 'invalid-feedback animated fadeInDown',
@@ -54,187 +71,157 @@ var BeFormWizard = function() {
                 jQuery(e).remove();
             },
             rules: {
-                'wizard-validation-material-scope1': {
-                    required: true,
-                    minlength: 2
+                'isps-scope': {
+                    required: true
                 },
-                'wizard-validation-material-content1': {
-                    required: true,
-                    minlength: 2
+                'isps-content': {
+                    required: true
                 },
-                'wizard-validation-material-remaks1': {
-                    required: true,
-                    minlength: 2
+                'isps-from': {
+                    required: true
                 },
-                'wizard-validation-material-scope2': {
-                    required: true,
-                    minlength: 2
+                'isps-to': {
+                    required: true
                 },
-                'wizard-validation-material-content2': {
-                    required: true,
-                    minlength: 2
+                'isps-remaks': {
+                    required: true
                 },
-                'wizard-validation-material-remaks2': {
-                    required: true,
-                    minlength: 2
+                'special-scope': {
+                    required: true
                 },
-                'wizard-validation-material-scope3': {
-                    required: true,
-                    minlength: 2
+                'special-content': {
+                    required: true
                 },
-                'wizard-validation-material-content3': {
-                    required: true,
-                    minlength: 2
+                'special-from': {
+                    required: true
                 },
-                'wizard-validation-material-remaks3': {
-                    required: true,
-                    minlength: 2
+                'special-to': {
+                    required: true
                 },
-                'wizard-validation-material-scope4': {
-                    required: true,
-                    minlength: 2
+                'special-remaks': {
+                    required: true
                 },
-                'wizard-validation-material-content4': {
-                    required: true,
-                    minlength: 2
+                'smt1-scope': {
+                    required: true
                 },
-                'wizard-validation-material-remaks4': {
-                    required: true,
-                    minlength: 2
+                'smt1-content': {
+                    required: true
                 },
-                'wizard-validation-material-scope5': {
-                    required: true,
-                    minlength: 2
+                'smt1-from': {
+                    required: true
                 },
-                'wizard-validation-material-content5': {
-                    required: true,
-                    minlength: 2
+                'smt1-to': {
+                    required: true
                 },
-                'wizard-validation-material-remaks5': {
-                    required: true,
-                    minlength: 2
+                'smt1-remaks': {
+                    required: true
                 },
-                'example-datepicker1' : {
-                    required : true
+                'smt2-scope': {
+                    required: true
                 },
-                'example-datepicker2' : {
-                    required : true
+                'smt2-content': {
+                    required: true
                 },
-                'example-datepicker3' : {
-                    required : true
+                'smt2-from': {
+                    required: true
                 },
-                'example-datepicker4' : {
-                    required : true
+                'smt2-to': {
+                    required: true
                 },
-                'example-datepicker5' : {
-                    required : true
+                'smt2-remaks': {
+                    required: true
                 },
-                'end-datepicker1' : {
-                    required : true
+                'siap-scope': {
+                    required: true
                 },
-                'end-datepicker2' : {
-                    required : true
+                'siap-content': {
+                    required: true
                 },
-                'end-datepicker3' : {
-                    required : true
+                'siap-from': {
+                    required: true
                 },
-                'end-datepicker4' : {
-                    required : true
+                'siap-to': {
+                    required: true
                 },
-                'end-datepicker5' : {
-                    required : true
+                'siap-remaks': {
+                    required: true
                 }
             },
             messages: {
-                'wizard-validation-material-scope1': {
-                    required: 'Please enter audit scope',
-                    minlength: 'Your audit scope must consist of at least 2 characters'
+                'isps-scope': {
+                    required: 'Please enter Audit Scope'
                 },
-                'wizard-validation-material-content1': {
-                    required: 'Please enter audit content',
-                    minlength: 'Your audit content must consist of at least 2 characters'
+                'isps-content': {
+                    required: 'Please enter Audit Content'
                 },
-                'wizard-validation-material-remaks1': {
-                    required: 'Please enter remaks',
-                    minlength: 'Your remaks must consist of at least 2 characters'
+                'isps-from' : {
+                    required: 'Please enter Start Date'
                 },
-                'wizard-validation-material-scope2': {
-                    required: 'Please enter audit scope',
-                    minlength: 'Your audit scope must consist of at least 2 characters'
+                'isps-to' : {
+                    required: 'Please enter End Date'
                 },
-                'wizard-validation-material-content2': {
-                    required: 'Please enter audit content',
-                    minlength: 'Your audit content must consist of at least 2 characters'
+                'isps-remaks': {
+                    required: 'Please enter Remaks'
                 },
-                'wizard-validation-material-remaks2': {
-                    required: 'Please enter remaks',
-                    minlength: 'Your remaks must consist of at least 2 characters'
+                'special-scope': {
+                    required: 'Please enter Audit Scope'
                 },
-                'wizard-validation-material-scope3': {
-                    required: 'Please enter audit scope',
-                    minlength: 'Your audit scope must consist of at least 2 characters'
+                'special-content': {
+                    required: 'Please enter Audit Content'
                 },
-                'wizard-validation-material-content3': {
-                    required: 'Please enter audit content',
-                    minlength: 'Your audit content must consist of at least 2 characters'
+                'special-from' : {
+                    required: 'Please enter Start Date'
                 },
-                'wizard-validation-material-remaks3': {
-                    required: 'Please enter remaks',
-                    minlength: 'Your remaks must consist of at least 2 characters'
+                'special-to' : {
+                    required: 'Please enter End Date'
                 },
-                'wizard-validation-material-scope4': {
-                    required: 'Please enter audit scope',
-                    minlength: 'Your audit scope must consist of at least 2 characters'
+                'special-remaks': {
+                    required: 'Please enter Remaks'
                 },
-                'wizard-validation-material-content4': {
-                    required: 'Please enter audit content',
-                    minlength: 'Your audit content must consist of at least 2 characters'
+                'smt1-scope': {
+                    required: 'Please enter Audit Scope'
                 },
-                'wizard-validation-material-remaks4': {
-                    required: 'Please enter remaks',
-                    minlength: 'Your remaks must consist of at least 2 characters'
+                'smt1-content': {
+                    required: 'Please enter Audit Content'
                 },
-                'wizard-validation-material-scope5': {
-                    required: 'Please enter audit scope',
-                    minlength: 'Your audit scope must consist of at least 2 characters'
+                'smt1-from' : {
+                    required: 'Please enter Start Date'
                 },
-                'wizard-validation-material-content5': {
-                    required: 'Please enter audit content',
-                    minlength: 'Your audit content must consist of at least 2 characters'
+                'smt1-to' : {
+                    required: 'Please enter End Date'
                 },
-                'wizard-validation-material-remaks5': {
-                    required: 'Please enter remaks',
-                    minlength: 'Your remaks must consist of at least 2 characters'
+                'smt1-remaks': {
+                    required: 'Please enter Remaks'
                 },
-                'example-datepicker1' : {
-                    required: 'Please enter start date'
+                'smt2-scope': {
+                    required: 'Please enter Audit Scope'
                 },
-                'example-datepicker2' : {
-                    required: 'Please enter start date'
+                'smt2-content': {
+                    required: 'Please enter Audit Content'
                 },
-                'example-datepicker3' : {
-                    required: 'Please enter start date'
+                'smt2-from' : {
+                    required: 'Please enter Start Date'
                 },
-                'example-datepicker4' : {
-                    required: 'Please enter start date'
+                'smt2-to' : {
+                    required: 'Please enter End Date'
                 },
-                'example-datepicker5' : {
-                    required: 'Please enter start date'
+                'smt2-remaks': {
+                    required: 'Please enter Remaks'
                 },
-                'end-datepicker1' : {
-                    required: 'Please enter end date'
+                'siap-scope': {
+                    required: 'Please enter Audit Scope'
                 },
-                'end-datepicker2' : {
-                    required: 'Please enter end date'
+                'siap-content': {
+                    required: 'Please enter Audit Content'
                 },
-                'end-datepicker3' : {
-                    required: 'Please enter end date'
+                'siap-from' : {
+                    required: 'Please enter Start Date'
                 },
-                'end-datepicker4' : {
-                    required: 'Please enter end date'
+                'siap-to' : {
+                    required: 'Please enter End Date'
                 },
-                'end-datepicker5' : {
-                    required: 'Please enter end date'
+                'siap-remaks': {
+                    required: 'Please enter Remaks'
                 }
             }
         });

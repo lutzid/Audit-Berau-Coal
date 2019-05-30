@@ -13,6 +13,8 @@
 
 Route::post('/post_user', 'TestController@loginUser');
 
+Route::post('/post_rencana', 'RencanaController@submitRencana');
+
 Route::get('/', function () {
     return view('pages.login');
 });
