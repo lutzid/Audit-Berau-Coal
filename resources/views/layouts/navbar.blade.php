@@ -32,7 +32,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/dashboard">Dashboard</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/">Sign Out</a>
+                    <a class="dropdown-item" href="{{url('logout_user')}}">Sign Out</a>
                 </div>
             </li>
         </ul>

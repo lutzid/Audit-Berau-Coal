@@ -17,5 +17,12 @@ class UserController extends Controller
             return redirect()->back()->with('error', 'You are not registered in this system');   
         }
     }
+    public function logoutUser(Request $request)
+    {
+        session()->forget('user');
+        session()->flush();
+        
+        return redirect('/');;
+    }
     //
 }

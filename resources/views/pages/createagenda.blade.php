@@ -25,7 +25,8 @@
                     <h2 class="content-heading font-w700">Rencana Audit Tahunan</h2>
                     <div class="block">
                         <div class="block-content">
-                            <form class="js-validation-material" action="be_forms_elements_material.html" method="post" onsubmit="return false;" novalidate="novalidate">
+                            <form class="js-validation-material" action="{{url('post_agenda')}}" method="post" snovalidate="novalidate">
+                            @csrf
                                 <div class="form-group">
                                     <div class="form-material floating">
                                         <select class="form-control" id="dept-cont" name="dept-cont">
@@ -67,7 +68,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material">
-                                        <select class="js-select2 form-control" id="auditor" name="auditor" style="width: 100%;" data-placeholder="Choose Auditor.." multiple>
+                                        <select class="js-select2 form-control" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor.." multiple="multiple">
                                             <option></option><!-- Empty value for demostrating material select box -->
                                             <option value="1">Auditor 1</option>
                                             <option value="2">Auditor 2</option>

@@ -43,7 +43,7 @@
                                 <!-- Sign In Form -->
                                 <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.js) -->
                                 <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                <form class="js-validation-signin px-30" action="{{url('post_user')}}" method="post">
+                                <form class="js-validation-signin px-30" action="{{url('login_user')}}" method="post">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-12">

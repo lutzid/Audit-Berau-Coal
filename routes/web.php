@@ -11,10 +11,6 @@
 |
 */
 
-Route::post('/post_user', 'UserController@loginUser');
-
-Route::post('/post_rencana', 'RencanaController@submitRencana');
-
 Route::get('/', function () {
     return view('pages.login');
 });
@@ -23,11 +19,19 @@ Route::get('/dashboard', function () {
     return view('pages.home');
 });
 
+Route::post('/login_user', 'UserController@loginUser');
+
+Route::get('/logout_user', 'UserController@logoutUser');
+
 Route::get('/rencana', 'RencanaController@index');
+
+Route::post('/post_rencana', 'RencanaController@submitRencana');
 
 Route::get('/agenda', 'AgendaController@index');
 
 Route::get('/createagenda', 'AgendaController@createAgenda');
+
+Route::post('/post_agenda', 'AgendaController@submitAgenda');
 
 Route::get('/laporanfull', function () {
 	return view('pages.laporanfull');
