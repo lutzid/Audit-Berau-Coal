@@ -22,14 +22,26 @@
             <!-- Main Container -->
             <main id="main-container">
                 <div class="content">
-                    <h2 class="content-heading font-w700">Agenda Audit</h2>
+                    <h2 class="content-heading font-w700">PLOR Audit</h2>
                     <div class="block">
                         <div class="block-content">
-                            <form class="js-validation-material" action="{{url('post_agenda')}}" method="post" snovalidate="novalidate">
+                            <form class="js-wizard-validation-material-form" action="{{url('post_plor')}}" method="post" novalidate="novalidate">
                             @csrf
                                 <div class="form-group">
                                     <div class="form-material floating">
-                                        <select class="form-control" id="dept-cont" name="dept-cont">
+                                        <input type="text" class="form-control valid" id="no-nc" name="no-nc" aria-describedby="no-nc-error" aria-invalid="false">
+                                        <label for="no-nc">No NC</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control valid" id="audit-period" name="audit-period" aria-describedby="audit-period-error" aria-invalid="false">
+                                        <label for="audit-period">Audit Period</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <select class="form-control valid" id="dept-cont" name="dept-cont" aria-describedby="dept-cont-error" aria-invalid="false">
                                             <option></option><!-- Empty value for demostrating material select box -->
                                             <option value="1">Dept 1</option>
                                             <option value="2">Dept 2</option>
@@ -40,7 +52,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating">
-                                        <select class="form-control" id="site" name="site">
+                                        <select class="form-control valid" id="site" name="site" aria-describedby="site-error" aria-invalid="false">
                                             <option></option><!-- Empty value for demostrating material select box -->
                                             <option value="1">Site 1</option>
                                             <option value="2">Site 2</option>
@@ -50,25 +62,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <input type="text" class="form-control" id="audit-scope" name="audit-scope">
-                                        <label for="audit-scope">Audit Scope</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-material floating">
-                                        <select class="form-control" id="auditee" name="auditee">
-                                            <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Auditee 1</option>
-                                            <option value="2">Auditee 2</option>
-                                            <option value="3">Auditee 3</option>
-                                        </select>
-                                        <label for="auditee">Auditee</label>
+                                    <div class="form-material floating open">
+                                        <input type="text" class="js-datepicker form-control" id="date" name="date" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                        <label for="date">Date</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material">
-                                        <select class="js-select2 form-control" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor.." multiple="multiple">
+                                        <select class="js-select2 form-control valid" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor.." multiple="multiple" aria-describedby="auditor-error" aria-invalid="false">
                                             <option></option><!-- Empty value for demostrating material select box -->
                                             <option value="1">Auditor 1</option>
                                             <option value="2">Auditor 2</option>
@@ -78,27 +79,58 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="from" name="from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                        <label for="from">From</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="to" name="to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
-                                        <label for="to">To</label>
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control valid" id="problem" name="problem" aria-describedby="problem-error" aria-invalid="false">
+                                        <label for="problem">Problem</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating">
-                                        <select class="form-control" id="approver" name="approver">
+                                        <input type="text" class="form-control valid" id="location" name="location" aria-describedby="location-error" aria-invalid="false">
+                                        <label for="location">Location</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <select class="form-control" id="category" name="category" aria-describedby="category-error" aria-invalid="false">
                                             <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Supv</option>
-                                            <option value="2">Supt</option>
-                                            <option value="3">Manager</option>
-                                            <option value="4">General Manager</option>
+                                            <option value="1">ISPS Code Audit</option>
+                                            <option value="2">K3L Spesial Audit</option>
+                                            <option value="3">K3L Semester 1</option>
+                                            <option value="4">K3L Semester 2</option>
+                                            <option value="5">Audit SIAP</option>
                                         </select>
-                                        <label for="approver">Approver</label>
+                                        <label for="category">Category</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control" id="smkp" name="smkp">
+                                        <label for="smkp">reference SMKP</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control" id="smk3" name="smk3">
+                                        <label for="smk3">reference SMK3</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control" id="ohsas" name="ohsas">
+                                        <label for="ohsas">reference OHSAS</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control" id="iso" name="iso">
+                                        <label for="iso">reference ISO</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control" id="begems" name="begems">
+                                        <label for="begems">reference BeGeMS</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -129,6 +161,8 @@
         <!-- Page JS Plugins -->
         <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
         <script src="assets/codebase/assets/js/plugins/select2/select2.full.min.js"></script>
+        <!-- Page JS Code -->
+        <script src="{{asset('js/plor.js')}}"></script>
         <script>
             jQuery(function () {
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)

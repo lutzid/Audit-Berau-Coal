@@ -46,3 +46,7 @@ Route::get('/checklist', function () {
 Route::get('/coba', function () {
 	return view('pages.coba');
 });
+
+Route::get('/plor', function () {
+	return view('pages.plor');
+});

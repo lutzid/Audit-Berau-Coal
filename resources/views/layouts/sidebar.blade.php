@@ -28,7 +28,7 @@
                         <a href="/laporanfull"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Laporan Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-docs"></i><span class="sidebar-mini-hide font-size-sm">PLOR Audit</span></a>
+                        <a href="/plor"><i class="si si-docs"></i><span class="sidebar-mini-hide font-size-sm">PLOR Audit</span></a>
                     </li>
                     <li class="table">
                         <a href="#"><i class="si si-screen-desktop"></i><span class="sidebar-mini-hide font-size-sm">Monitoring Hasil Audit</span></a>
