@@ -3,6 +3,8 @@
     <head>
         @include('layouts.header')
         <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/select2/select2.min.css">
+        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/select2/select2-bootstrap.min.css">
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">
@@ -13,6 +15,7 @@
             <!-- Header -->
             <header id="page-header">
                 @include('layouts.navbar')
+                
             </header>
             <!-- END Header -->
 
@@ -63,8 +66,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <select class="form-control" id="auditor" name="auditor">
+                                    <div class="form-material">
+                                        <select class="js-select2 form-control" id="auditor" name="auditor" style="width: 100%;" data-placeholder="Choose Auditor.." multiple>
                                             <option></option><!-- Empty value for demostrating material select box -->
                                             <option value="1">Auditor 1</option>
                                             <option value="2">Auditor 2</option>
@@ -94,13 +97,21 @@
                                             <option value="3">Manager</option>
                                             <option value="4">General Manager</option>
                                         </select>
-                                        <label for="approver">Auditor</label>
+                                        <label for="approver">Approver</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-alt-primary">Submit</button>
                                 </div>
                             </form>
+
+                                <!-- Select2 (Material forms) -->
+                                <div class="col-xl-6">
+                                    <form action="be_forms_plugins.html" method="post" onsubmit="return false;">
+                                        
+                                    </form>
+                                </div>
+                                <!-- END Select2 (Material forms) -->
                         </div>
                     </div>
                 </div>
@@ -115,17 +126,12 @@
         </div>
 
         <!-- Page JS Plugins -->
-        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js')}}"></script>
-
-
-        <!-- Page JS Code -->
+        <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/codebase/assets/js/plugins/select2/select2.full.min.js"></script>
         <script>
             jQuery(function () {
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
-                Codebase.helpers(['datepicker']);
+                Codebase.helpers(['datepicker', 'select2']);
             });
         </script>
 

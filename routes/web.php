@@ -46,3 +46,7 @@ Route::get('/laporanlimit', function () {
 Route::get('/checklist', function () {
 	return view('pages.checklist');
 });
+
+Route::get('/coba', function () {
+	return view('pages.coba');
+});
