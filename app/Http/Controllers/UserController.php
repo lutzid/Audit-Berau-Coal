@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Test;
+use App\User;
 
-class TestController extends Controller
+class UserController extends Controller
 {
     public function loginUser(Request $request)
     {
-        $tabelUser = Test::where('username',$request->input('login-username'))->first();
+        $tabelUser = User::where('username',$request->input('login-username'))->first();
         if($tabelUser!=null){
             $request->session()->put('user', $tabelUser);
             return redirect('/dashboard');

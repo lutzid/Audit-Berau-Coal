@@ -10,5 +10,9 @@ class RencanaController extends Controller
     {
         dd($request);
     }
-    //
+
+    public function index()
+    {
+        return view('pages.rencana');
+    }
 }
