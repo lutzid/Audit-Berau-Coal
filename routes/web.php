@@ -15,13 +15,11 @@ Route::get('/', function () {
     return view('pages.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('pages.home');
-});
-
 Route::post('/login_user', 'UserController@loginUser');
 
 Route::get('/logout_user', 'UserController@logoutUser');
+
+Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('/rencana', 'RencanaController@index');
 
