@@ -3,6 +3,7 @@
     <head>
         @include('layouts.header')
         <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">
@@ -20,14 +21,14 @@
             <main id="main-container">
                 <div class="content">
                 <!-- Material Forms Validation -->
-                    <h2 class="content-heading font-w700">Checklist Audit</h2>
+                    <h2 class="content-heading font-w700">Laporan Audit</h2>
                     <div class="block">
                         <div class="block-content">
                             <div class="row justify-content-center py-20">
                                 <div class="col-xl-6">
                                     <!-- jQuery Validation (.js-validation-material class is initialized in js/pages/be_forms_validation.js) -->
                                     <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                    <form class="js-validation-material" action="be_forms_validation.html" method="post">
+                                    <form class="js-validation-material" action="" method="post">
                                         <div class="form-group">
                                             <div class="form-material">
                                                 <input type="text" class="form-control" id="val-auditname" name="val-auditname" placeholder="Enter audit name..">
@@ -53,7 +54,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-alt-primary">Submit</button>
+                                            <td><a class="btn btn-alt-primary" data-toggle="modal" data-target="#modal-slideup"> Submit</a></td>
                                         </div>
                                     </form>
                                 </div>
@@ -64,6 +65,25 @@
                     <!-- END Material Forms Validation -->
             </main>
             <!-- END Main Container -->
+
+            <!-- Large modal -->
+            <div class="modal fade" id="modal-slideup" tabindex="-1" role="dialog" aria-labelledby="modal-slideup" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-slideup" role="document">
+                    <div class="modal-content">
+                        <div class="block block-themed block-transparent mb-0">
+                            <div class="block-content">
+                                <button type="button" class="btn btn-lg btn-circle btn-primary mr-5 mb-5 pull-right" data-dismiss="modal" aria-label="Close">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                                <p class="text-left">
+                                    <span class="font-w700 mr-5 font-size-h2 text-primary">File Telah Terupload</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Large Modal -->
 
             <!-- Footer -->
             <footer id="page-footer" class="bg-white">

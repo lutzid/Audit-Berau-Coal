@@ -65,7 +65,7 @@
                                     <i class="fa fa-times"></i>
                                 </button>
                                 <p class="text-left">
-                                    <span class="font-w700 mr-5 font-size-h1 text-primary">File Telah Terdownload</span>
+                                    <span class="font-w700 mr-5 font-size-h2 text-primary">File Telah Terdownload</span>
                                 </p>
                             </div>
                         </div>
