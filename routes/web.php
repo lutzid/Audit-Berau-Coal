@@ -39,11 +39,19 @@ Route::get('/laporanfull', function () {
 	return view('pages.laporanfull');
 });
 
-Route::get('/laporanlimit', function () {
-	return view('pages.laporanlimit');
+Route::get('/laporan', function () {
+	return view('pages.viewlaporan');
+});
+
+Route::get('/uploadlaporan', function () {
+	return view('pages.laporan');
 });
 
 Route::get('/checklist', function () {
+	return view('pages.viewchecklist');
+});
+
+Route::get('/uploadchecklist', function () {
 	return view('pages.checklist');
 });
 
