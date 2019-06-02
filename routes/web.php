@@ -31,6 +31,10 @@ Route::get('/createagenda', 'AgendaController@createAgenda');
 
 Route::post('/post_agenda', 'AgendaController@submitAgenda');
 
+Route::get('/plor', 'PlorController@index');
+
+Route::post('/post_plor', 'PlorController@submitPlor');
+
 Route::get('/laporanfull', function () {
 	return view('pages.laporanfull');
 });
@@ -45,8 +49,4 @@ Route::get('/checklist', function () {
 
 Route::get('/coba', function () {
 	return view('pages.coba');
-});
-
-Route::get('/plor', function () {
-	return view('pages.plor');
 });
