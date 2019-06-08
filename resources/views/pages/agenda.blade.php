@@ -19,6 +19,16 @@
 
             <!-- Main Container -->
             <main id="main-container">
+                @if (\Session::has('success'))
+                    <div class="alert alert-success">
+                        {!! \Session::get('success') !!}
+                    </div>
+                @endif
+                @if (\Session::has('error'))
+                    <div class="alert alert-danger">
+                        {!! \Session::get('error') !!}
+                    </div>
+                @endif
                 <div class="content">
                     <h2 class="content-heading font-w700">Agenda Audit</h2>
                     <div class="block">
@@ -30,6 +40,7 @@
                                 <table class="table table-striped table-vcenter">
                                     <thead>
                                         <tr>
+                                            <th>Proposer</th>
                                             <th>Departemen/Kontraktor</th>
                                             <th>Site</th>
                                             <th>Audit Scope</th>
@@ -41,46 +52,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($agendas as $agenda)
                                         <tr>
-                                            <td>Dept 1</td>
-                                            <td>Site 1</td>
-                                            <td>Scope 1</td>
-                                            <td>Dept Head</td>
-                                            <td>Auditor 1, Auditor 2</td>
-                                            <td>20/05/2019</td>
-                                            <td>20/07/2019</td>
-                                            <td>Manager</td>
+                                            <td>{{$agenda->proposer}}</td>
+                                            <td>{{$agenda->depcont}}</td>
+                                            <td>{{$agenda->site}}</td>
+                                            <td>{{$agenda->scope}}</td>
+                                            <td>{{$agenda->auditee}}</td>
+                                            <td>{{$agenda->auditor}}</td>
+                                            <td>{{$agenda->from}}</td>
+                                            <td>{{$agenda->to}}</td>
+                                            <td>{{$agenda->approver}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Dept 1</td>
-                                            <td>Site 1</td>
-                                            <td>Scope 1</td>
-                                            <td>Dept Head</td>
-                                            <td>Auditor 1, Auditor 2</td>
-                                            <td>20/05/2019</td>
-                                            <td>20/07/2019</td>
-                                            <td>Manager</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dept 1</td>
-                                            <td>Site 1</td>
-                                            <td>Scope 1</td>
-                                            <td>Dept Head</td>
-                                            <td>Auditor 1, Auditor 2</td>
-                                            <td>20/05/2019</td>
-                                            <td>20/07/2019</td>
-                                            <td>Manager</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dept 1</td>
-                                            <td>Site 1</td>
-                                            <td>Scope 1</td>
-                                            <td>Dept Head</td>
-                                            <td>Auditor 1, Auditor 2</td>
-                                            <td>20/05/2019</td>
-                                            <td>20/07/2019</td>
-                                            <td>Manager</td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

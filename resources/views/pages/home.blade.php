@@ -18,10 +18,10 @@
             <!-- Main Container -->
             <main id="main-container">
             <div class="content">
-                    <h2 class="content-heading font-w700">Hello, {{Session('user')->username}}</h2>
+                    <h2 class="content-heading font-w700">Hello, {{Session('user')->name}}</h2>
                     <div class="block">
                         <div class="block-content">
-                            <p class="block-header font-size-xl font-w700">Your access is {{Session('user')->status}}</p>
+                            <p class="block-header font-size-xl font-w700">You are {{Session('user')->status}}</p>
                         </div>
                     </div>
                 </div>

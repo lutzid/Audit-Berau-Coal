@@ -28,75 +28,78 @@
                             <form class="js-validation-material" action="{{url('post_agenda')}}" method="post" snovalidate="novalidate">
                             @csrf
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <select class="form-control" id="dept-cont" name="dept-cont">
-                                            <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Dept 1</option>
-                                            <option value="2">Dept 2</option>
-                                            <option value="3">Dept 3</option>
+                                    <div class="form-material">
+                                        <select class="js-select2 form-control" id="depcont" name="depcont" style="width: 100%;" data-placeholder="Choose Department/Contractor.." tabindex="-1" aria-hidden="true">
+                                            <option></option>
+                                            @foreach($depts as $dept)
+                                            <option value="{{$dept->name}}">{{$dept->name}}</option>
+                                            @endforeach
+                                            @foreach($conts as $cont)
+                                            <option value="{{$cont->name}}">{{$cont->name}}</option>
+                                            @endforeach
                                         </select>
-                                        <label for="dept-cont">Departemen/Kontraktor</label>
+                                        <label for="depcont">Department/Contractor</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <select class="form-control" id="site" name="site">
-                                            <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Site 1</option>
-                                            <option value="2">Site 2</option>
-                                            <option value="3">Site 3</option>
+                                    <div class="form-material">
+                                        <select class="js-select2 form-control" id="site" name="site" style="width: 100%;" data-placeholder="Choose Site.." tabindex="-1" aria-hidden="true">
+                                            <option></option>
+                                            @foreach($sites as $site)
+                                            <option value="{{$site->name}}">{{$site->name}}</option>
+                                            @endforeach
                                         </select>
                                         <label for="site">Site</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <input type="text" class="form-control" id="audit-scope" name="audit-scope">
-                                        <label for="audit-scope">Audit Scope</label>
+                                    <div class="form-material">
+                                        <input type="text" class="form-control" id="scope" name="scope" placeholder="Enter Audit Scope..">
+                                        <label for="scope">Audit Scope</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <select class="form-control" id="auditee" name="auditee">
-                                            <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Auditee 1</option>
-                                            <option value="2">Auditee 2</option>
-                                            <option value="3">Auditee 3</option>
+                                    <div class="form-material">
+                                        <select class="js-select2 form-control" id="auditee" name="auditee" style="width: 100%;" data-placeholder="Choose Auditee.." tabindex="-1" aria-hidden="true">
+                                            <option></option>
+                                            @foreach($audis as $audi)
+                                            <option value="{{$audi->name}}">{{$audi->name}}</option>
+                                            @endforeach
                                         </select>
                                         <label for="auditee">Auditee</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material">
-                                        <select class="js-select2 form-control" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor.." multiple="multiple">
-                                            <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Auditor 1</option>
-                                            <option value="2">Auditor 2</option>
-                                            <option value="3">Auditor 3</option>
+                                        <select class="js-select2 form-control" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor.." tabindex="-1" aria-hidden="true" multiple="multiple">
+                                            <option></option>
+                                            @foreach($auds as $aud)
+                                            <option value="{{$aud->name}}">{{$aud->name}}</option>
+                                            @endforeach
                                         </select>
                                         <label for="auditor">Auditor</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="from" name="from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                        <input type="text" class="js-datepicker form-control" id="from" name="from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
                                         <label for="from">From</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="to" name="to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                        <input type="text" class="js-datepicker form-control" id="to" name="to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
                                         <label for="to">To</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-material floating">
-                                        <select class="form-control" id="approver" name="approver">
-                                            <option></option><!-- Empty value for demostrating material select box -->
-                                            <option value="1">Supv</option>
-                                            <option value="2">Supt</option>
-                                            <option value="3">Manager</option>
-                                            <option value="4">General Manager</option>
+                                    <div class="form-material">
+                                        <select class="js-select2 form-control" id="approver" name="approver" style="width: 100%;" data-placeholder="Choose Approver.." tabindex="-1" aria-hidden="true">
+                                            <option></option>
+                                            <option value="Feri Indrayana">Feri Indrayana</option>
+                                            <option value="Yombi Gautama">Yombi Gautama</option>
+                                            <option value="Sutami Sitorus">Sutami Sitorus</option>
+                                            <option value="Bobby Riyanto">Bobby Riyanto</option>
                                         </select>
                                         <label for="approver">Approver</label>
                                     </div>
@@ -105,14 +108,6 @@
                                     <button type="submit" class="btn btn-alt-primary">Submit</button>
                                 </div>
                             </form>
-
-                                <!-- Select2 (Material forms) -->
-                                <div class="col-xl-6">
-                                    <form action="be_forms_plugins.html" method="post" onsubmit="return false;">
-                                        
-                                    </form>
-                                </div>
-                                <!-- END Select2 (Material forms) -->
                         </div>
                     </div>
                 </div>

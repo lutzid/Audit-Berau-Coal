@@ -27,9 +27,9 @@ Route::post('/post_rencana', 'RencanaController@submitRencana');
 
 Route::get('/agenda', 'AgendaController@index');
 
-Route::get('/createagenda', 'AgendaController@createAgenda');
+Route::get('/createagenda', 'AgendaController@create');
 
-Route::post('/post_agenda', 'AgendaController@submitAgenda');
+Route::post('/post_agenda', 'AgendaController@store');
 
 Route::get('/plor', 'PlorController@index');
 

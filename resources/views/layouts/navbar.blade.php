@@ -28,7 +28,7 @@
         <ul class="nav nav-tabs">
             
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{Session('user')->username}}</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{Session('user')->name}}</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/dashboard">Dashboard</a>
                     <div class="dropdown-divider"></div>
