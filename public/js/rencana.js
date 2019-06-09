@@ -71,156 +71,156 @@ var BeFormWizard = function() {
                 jQuery(e).remove();
             },
             rules: {
-                'isps-scope': {
+                'isps_scope': {
                     required: true
                 },
-                'isps-content': {
+                'isps_content': {
                     required: true
                 },
-                'isps-from': {
+                'isps_from': {
                     required: true
                 },
-                'isps-to': {
+                'isps_to': {
                     required: true
                 },
-                'isps-remaks': {
+                'isps_remaks': {
                     required: true
                 },
-                'special-scope': {
+                'special_scope': {
                     required: true
                 },
-                'special-content': {
+                'special_content': {
                     required: true
                 },
-                'special-from': {
+                'special_from': {
                     required: true
                 },
-                'special-to': {
+                'special_to': {
                     required: true
                 },
-                'special-remaks': {
+                'special_remaks': {
                     required: true
                 },
-                'smt1-scope': {
+                'smt1_scope': {
                     required: true
                 },
-                'smt1-content': {
+                'smt1_content': {
                     required: true
                 },
-                'smt1-from': {
+                'smt1_from': {
                     required: true
                 },
-                'smt1-to': {
+                'smt1_to': {
                     required: true
                 },
-                'smt1-remaks': {
+                'smt1_remaks': {
                     required: true
                 },
-                'smt2-scope': {
+                'smt2_scope': {
                     required: true
                 },
-                'smt2-content': {
+                'smt2_content': {
                     required: true
                 },
-                'smt2-from': {
+                'smt2_from': {
                     required: true
                 },
-                'smt2-to': {
+                'smt2_to': {
                     required: true
                 },
-                'smt2-remaks': {
+                'smt2_remaks': {
                     required: true
                 },
-                'siap-scope': {
+                'siap_scope': {
                     required: true
                 },
-                'siap-content': {
+                'siap_content': {
                     required: true
                 },
-                'siap-from': {
+                'siap_from': {
                     required: true
                 },
-                'siap-to': {
+                'siap_to': {
                     required: true
                 },
-                'siap-remaks': {
+                'siap_remaks': {
                     required: true
                 }
             },
             messages: {
-                'isps-scope': {
+                'isps_scope': {
                     required: 'Please enter Audit Scope'
                 },
-                'isps-content': {
+                'isps_content': {
                     required: 'Please enter Audit Content'
                 },
-                'isps-from' : {
+                'isps_from' : {
                     required: 'Please enter Start Date'
                 },
-                'isps-to' : {
+                'isps_to' : {
                     required: 'Please enter End Date'
                 },
-                'isps-remaks': {
+                'isps_remaks': {
                     required: 'Please enter Remaks'
                 },
-                'special-scope': {
+                'special_scope': {
                     required: 'Please enter Audit Scope'
                 },
-                'special-content': {
+                'special_content': {
                     required: 'Please enter Audit Content'
                 },
-                'special-from' : {
+                'special_from' : {
                     required: 'Please enter Start Date'
                 },
-                'special-to' : {
+                'special_to' : {
                     required: 'Please enter End Date'
                 },
-                'special-remaks': {
+                'special_remaks': {
                     required: 'Please enter Remaks'
                 },
-                'smt1-scope': {
+                'smt1_scope': {
                     required: 'Please enter Audit Scope'
                 },
-                'smt1-content': {
+                'smt1_content': {
                     required: 'Please enter Audit Content'
                 },
-                'smt1-from' : {
+                'smt1_from' : {
                     required: 'Please enter Start Date'
                 },
-                'smt1-to' : {
+                'smt1_to' : {
                     required: 'Please enter End Date'
                 },
-                'smt1-remaks': {
+                'smt1_remaks': {
                     required: 'Please enter Remaks'
                 },
-                'smt2-scope': {
+                'smt2_scope': {
                     required: 'Please enter Audit Scope'
                 },
-                'smt2-content': {
+                'smt2_content': {
                     required: 'Please enter Audit Content'
                 },
-                'smt2-from' : {
+                'smt2_from' : {
                     required: 'Please enter Start Date'
                 },
-                'smt2-to' : {
+                'smt2_to' : {
                     required: 'Please enter End Date'
                 },
-                'smt2-remaks': {
+                'smt2_remaks': {
                     required: 'Please enter Remaks'
                 },
-                'siap-scope': {
+                'siap_scope': {
                     required: 'Please enter Audit Scope'
                 },
-                'siap-content': {
+                'siap_content': {
                     required: 'Please enter Audit Content'
                 },
-                'siap-from' : {
+                'siap_from' : {
                     required: 'Please enter Start Date'
                 },
-                'siap-to' : {
+                'siap_to' : {
                     required: 'Please enter End Date'
                 },
-                'siap-remaks': {
+                'siap_remaks': {
                     required: 'Please enter Remaks'
                 }
             }

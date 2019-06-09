@@ -10,11 +10,6 @@
         <div id="page-container" class="main-content-boxed">
             <!-- Main Container -->
             <main id="main-container">
-            @if (\Session::has('error'))
-                <div class="alert alert-danger">
-                    {!! \Session::get('error') !!}
-                </div>
-            @endif
                 <!-- Page Content -->
                 <div class="bg-image" style="background-image: url('img/bglogin.jpg');">
                     <div class="row mx-0 bg-black-op">
@@ -29,6 +24,7 @@
                             </div>
                         </div>
                         <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible" data-toggle="appear" data-class="animated fadeInRight">
+                        @include('layouts.messages')s
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">

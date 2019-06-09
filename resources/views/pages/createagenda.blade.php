@@ -24,8 +24,9 @@
                 <div class="content">
                     <h2 class="content-heading font-w700">Agenda Audit</h2>
                     <div class="block">
+                    @include('layouts.messages')
                         <div class="block-content">
-                            <form class="js-validation-material" action="{{url('post_agenda')}}" method="post" snovalidate="novalidate">
+                            <form class="js-validation-material" action="{{url('post_agenda')}}" method="post" novalidate="novalidate">
                             @csrf
                                 <div class="form-group">
                                     <div class="form-material">
@@ -71,7 +72,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material">
-                                        <select class="js-select2 form-control" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor.." tabindex="-1" aria-hidden="true" multiple="multiple">
+                                        <select class="js-select2 form-control" id="auditor" name="auditor[]" style="width: 100%;" data-placeholder="Choose Auditor(1 or more).." tabindex="-1" aria-hidden="true" multiple="multiple">
                                             <option></option>
                                             @foreach($auds as $aud)
                                             <option value="{{$aud->name}}">{{$aud->name}}</option>
@@ -96,10 +97,9 @@
                                     <div class="form-material">
                                         <select class="js-select2 form-control" id="approver" name="approver" style="width: 100%;" data-placeholder="Choose Approver.." tabindex="-1" aria-hidden="true">
                                             <option></option>
-                                            <option value="Feri Indrayana">Feri Indrayana</option>
-                                            <option value="Yombi Gautama">Yombi Gautama</option>
-                                            <option value="Sutami Sitorus">Sutami Sitorus</option>
-                                            <option value="Bobby Riyanto">Bobby Riyanto</option>
+                                            @foreach($apps as $app)
+                                            <option value="{{$app->name}}">{{$app->name}}</option>
+                                            @endforeach
                                         </select>
                                         <label for="approver">Approver</label>
                                     </div>
@@ -122,6 +122,7 @@
         </div>
 
         <!-- Page JS Plugins -->
+        <script src="assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
         <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
         <script src="assets/codebase/assets/js/plugins/select2/select2.full.min.js"></script>
         <script>
@@ -130,6 +131,9 @@
                 Codebase.helpers(['datepicker', 'select2']);
             });
         </script>
+
+        <!-- Page JS Code -->
+        <script src="{{asset('js/agenda.js')}}"></script>
 
 
     </body>

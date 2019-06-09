@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAgendasTable extends Migration
+class CreatePlorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,23 @@ class CreateAgendasTable extends Migration
      */
     public function up()
     {
-        Schema::create('agendas', function (Blueprint $table) {
+        Schema::create('plors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('proposer');
+            $table->string('proposer')->nullable();
+            $table->string('no_nc');
+            $table->string('audit_period');
             $table->string('depcont');
             $table->string('site');
-            $table->string('scope');
-            $table->string('auditee');
+            $table->date('date');
             $table->string('auditor');
-            $table->date('from');
-            $table->date('to');
+            $table->string('problem');
+            $table->string('location');
+            $table->string('category');
+            $table->string('smkp');
+            $table->string('smk3');
+            $table->string('ohsas');
+            $table->string('iso');
+            $table->string('begems');
             $table->string('approver');
             $table->string('status')->nullable();
             $table->timestamps();
@@ -36,6 +43,6 @@ class CreateAgendasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agendas');
+        Schema::dropIfExists('plors');
     }
 }

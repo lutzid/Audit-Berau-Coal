@@ -23,7 +23,13 @@ Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('/rencana', 'RencanaController@index');
 
-Route::post('/post_rencana', 'RencanaController@submitRencana');
+Route::get('/createrencana', 'RencanaController@create');
+
+Route::post('/post_rencana', 'RencanaController@store');
+
+Route::get('/approverAM/{id}', 'RencanaController@approverAM');
+
+Route::get('/approverGM/{id}', 'RencanaController@approverGM');
 
 Route::get('/agenda', 'AgendaController@index');
 
@@ -31,9 +37,18 @@ Route::get('/createagenda', 'AgendaController@create');
 
 Route::post('/post_agenda', 'AgendaController@store');
 
-Route::get('/plor', 'PlorController@index');
+Route::get('/approveAM/{id}', 'AgendaController@approveAM');
 
-Route::post('/post_plor', 'PlorController@submitPlor');
+Route::get('/approveGM/{id}', 'AgendaController@approveGM');
+
+Route::get('/approve/{id}', 'AgendaController@approve');
+
+// Route::get('/approve/{id}/{approver}', [
+// 	'as' => 'approve', 'uses' => 'AgendaController@approve']);
+
+Route::get('/plor', 'PlorController@create');
+
+Route::post('/post_plor', 'PlorController@store');
 
 Route::get('/laporanfull', function () {
 	return view('pages.laporanfull');

@@ -19,27 +19,20 @@
 
             <!-- Main Container -->
             <main id="main-container">
-                @if (\Session::has('success'))
-                    <div class="alert alert-success">
-                        {!! \Session::get('success') !!}
-                    </div>
-                @endif
-                @if (\Session::has('error'))
-                    <div class="alert alert-danger">
-                        {!! \Session::get('error') !!}
-                    </div>
-                @endif
                 <div class="content">
                     <h2 class="content-heading font-w700">Agenda Audit</h2>
                     <div class="block">
+                    @include('layouts.messages')
                         <div class="block-header">
+                            @if(session('user')->permit == 1)
                             <div><a class="btn btn-success" href="/createagenda"> Create</a></div>
+                            @endif
                         </div>
                         <div class="block-content">
                             <div class="table-responsive">
-                                <table class="table table-striped table-vcenter">
+                                <table class="table table-striped table-vcenter table-bordered">
                                     <thead>
-                                        <tr>
+                                        <tr class="bg-gd-earth text-white text-center font-w700 h6">
                                             <th>Proposer</th>
                                             <th>Departemen/Kontraktor</th>
                                             <th>Site</th>
@@ -49,6 +42,10 @@
                                             <th>From</th>
                                             <th>To</th>
                                             <th>Approver</th>
+                                            <th>Status</th>
+                                            @if(session('user')->status == 'Audit Manager' || session('user')->status == 'Audit General Manager' || session('user')->status == 'Kepala Teknik Tambang' || session('user')->status == 'Wakil Kepala Teknik Tambang')
+                                            <th>Action</th>
+                                            @endif
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -63,6 +60,32 @@
                                             <td>{{$agenda->from}}</td>
                                             <td>{{$agenda->to}}</td>
                                             <td>{{$agenda->approver}}</td>
+                                            <td>
+                                                @if($agenda->status == 'Approved')
+                                                    <p class="p-10 bg-primary font-w700 text-center text-white">{{$agenda->status}}</p>
+                                                @else
+                                                    <p class="p-10 bg-warning font-w700 text-center">{{$agenda->status}}</p>
+                                                @endif
+
+                                            </td>
+                                            @if(session('user')->status == 'Audit Manager' && $agenda->status == 'in Reviewer')
+                                            <td>
+                                            <a href="/approveAM/{{$agenda->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                                Approve
+                                            </a>
+                                            </td>
+                                            @elseif(session('user')->status == 'Audit General Manager' && $agenda->status == 'in General Manager')
+                                            <td>
+                                            <a href="/approveGM/{{$agenda->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                                Approve
+                                            </a>
+                                            @elseif((session('user')->status == 'Kepala Teknik Tambang' || session('user')->status == 'Wakil Kepala Teknik Tambang') && $agenda->status == 'in Approver' && $agenda->approver == session('user')->name)
+                                            <td>
+                                            <a href="/approve/{{$agenda->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                                Approve
+                                            </a>
+                                            </td>
+                                            @endif
                                         </tr>
                                         @endforeach
                                     </tbody>

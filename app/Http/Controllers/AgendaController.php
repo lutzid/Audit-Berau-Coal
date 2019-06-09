@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Agenda;
 use App\Auditee;
-use App\Auditor;
 use App\Contractor;
 use App\Department;
 use App\Site;
-use App\Agenda;
+use App\User;
 
 class AgendaController extends Controller
 {
@@ -34,10 +34,12 @@ class AgendaController extends Controller
     public function create()
     {
         $data['audis'] = Auditee::all();
-        $data['auds'] = Auditor::all();
+        $data['auds'] = User::where('status', '=', 'Audit Supervisor')->orWhere('status', '=', 'Audit Superintendent')->orWhere('status', '=', 'Audit Manager')->orWhere('status', '=', 'Auditor')->orderBy('name')->get();
         $data['conts'] = Contractor::all();
         $data['depts'] = Department::all();
         $data['sites'] = Site::all();
+        $data['apps'] = User::where('status', 'like', '%Kepala%')->orderBy('name')->get();
+        // dd($data['auds']);
         return view('pages.createagenda', $data);
     }
 
@@ -64,12 +66,39 @@ class AgendaController extends Controller
         $agenda->from = $data['from'];
         $agenda->to = $data['to'];
         $agenda->approver = $data['approver'];
+        $agenda->status = 'in Reviewer';
 
         $agenda->save();
-
-        $agendas = Agenda::all();
         
-        return redirect('/agenda')->with('success', 'New Agenda has been proposed');
+        return redirect('/agenda')->with('success', 'New Agenda has been proposed, waiting approval from Audit Manager');
+    }
+
+    public function approveAM($id)
+    {
+        $agenda = Agenda::find($id);
+        $agenda->status = 'in General Manager';
+        $agenda->save();
+        return redirect('/agenda')->with('success', 'Status Change success, waiting approval from Audit General Manager');
+        //
+    }
+
+    public function approveGM($id)
+    {
+        $agenda = Agenda::find($id);
+        $agenda->status = 'in Approver';
+        $agenda->save();
+        return redirect('/agenda')->with('success', 'Status Change success, waiting approval from Approver');
+        //
+    }
+
+    public function approve($id)
+    {
+        // dd($approver);
+        $agenda = Agenda::find($id);
+        $agenda->status = 'Approved';
+        $agenda->save();
+        return redirect('/agenda')->with('success', 'Status Change success, Agenda has been Approved');
+        //
     }
     //
 }

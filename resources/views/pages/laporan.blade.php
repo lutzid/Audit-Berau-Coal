@@ -23,6 +23,7 @@
                 <!-- Material Forms Validation -->
                     <h2 class="content-heading font-w700">Laporan Audit</h2>
                     <div class="block">
+                    @include('layouts.messages')
                         <div class="block-content">
                             <div class="row justify-content-center py-20">
                                 <div class="col-xl-6">

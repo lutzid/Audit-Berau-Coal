@@ -22,62 +22,40 @@ var BeFormValidation = function() {
                 jQuery(e).remove();
             },
             rules: {
-                'no_nc': {
-                    required: true
-                },
-                'audit_period': {
-                    required: true
-                },
                 'depcont': {
                     required: true
                 },
                 'site': {
                     required: true
                 },
-                'date': {
+                'scope': {
+                    required: true
+                },
+                'auditee': {
                     required: true
                 },
                 'auditor[]': {
                     required: true
                 },
-                'problem': {
+                'from': {
                     required: true
                 },
-                'location': {
+                'to': {
                     required: true
                 },
-                'category': {
+                'approver': {
                     required: true
-                },
+                }
             },
             messages: {
-                'no-nc': {
-                    required: 'Please enter No NC'
-                },
-                'audit-period': {
-                    required: 'Please enter Audit Period'
-                },
-                'depcont' : {
-                    required: 'Please enter Department/Contractor'
-                },
-                'site' : {
-                    required: 'Please enter Site'
-                },
-                'date': {
-                    required: 'Please enter Date'
-                },
-                'auditor': {
-                    required: 'Please enter Auditor'
-                },
-                'problem': {
-                    required: 'Please enter problem'
-                },
-                'location' : {
-                    required: 'Please enter Location'
-                },
-                'category' : {
-                    required: 'Please enter Category'
-                }
+                'depcont': 'Please select a Department/Contractor',
+                'site': 'Please select a Site',
+                'scope': 'Please enter Audit Scope',
+                'auditee': 'Please select an Auditee ',
+                'auditor[]': 'Please select an Auditor (may choose more than one) ',
+                'from': 'Please enter Start Date',
+                'to': 'Please enter End Date',
+                'approver': 'Please select an Approver'
             }
         });
     };

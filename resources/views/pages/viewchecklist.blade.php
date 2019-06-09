@@ -22,6 +22,7 @@
                 <div class="content">
                     <h2 class="content-heading font-w700">Checklist</h2>
                     <div class="block">
+                    @include('layouts.messages')
                         <div class="block-header">
                             <div><a class="btn btn-success" href="/uploadchecklist"> Upload</a></div>
                         </div>
