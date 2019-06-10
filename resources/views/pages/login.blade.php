@@ -24,7 +24,6 @@
                             </div>
                         </div>
                         <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible" data-toggle="appear" data-class="animated fadeInRight">
-                        @include('layouts.messages')s
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
@@ -32,6 +31,7 @@
                                         <span class="font-size-xl text-dark">Berau</span><span class="font-size-xl">Coal</span>
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to K3L Audit</h1>
+                                    @include('layouts.messages')
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
                                 </div>
                                 <!-- END Header -->

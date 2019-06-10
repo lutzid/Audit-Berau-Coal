@@ -46,28 +46,34 @@ var BeFormValidation = function() {
                 'location': {
                     required: true
                 },
+                'object': {
+                    required: true
+                },
                 'category': {
                     required: true
                 },
+                'approver': {
+                    required: true
+                }
             },
             messages: {
-                'no-nc': {
+                'no_nc': {
                     required: 'Please enter No NC'
                 },
                 'audit-period': {
                     required: 'Please enter Audit Period'
                 },
                 'depcont' : {
-                    required: 'Please enter Department/Contractor'
+                    required: 'Please choose Department/Contractor'
                 },
                 'site' : {
-                    required: 'Please enter Site'
+                    required: 'Please choose Site'
                 },
                 'date': {
                     required: 'Please enter Date'
                 },
-                'auditor': {
-                    required: 'Please enter Auditor'
+                'auditor[]': {
+                    required: 'Please choose Auditor'
                 },
                 'problem': {
                     required: 'Please enter problem'
@@ -75,8 +81,14 @@ var BeFormValidation = function() {
                 'location' : {
                     required: 'Please enter Location'
                 },
+                'object' : {
+                    required: 'Please enter Object'
+                },
                 'category' : {
                     required: 'Please enter Category'
+                },
+                'approver' : {
+                    required: 'Please choose Approver Lead Auditor'
                 }
             }
         });

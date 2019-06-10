@@ -22,7 +22,7 @@
                 <div class="content">
                     <h2 class="content-heading font-w700">Rencana Audit Tahunan</h2>
                     <div class="block">
-                    @include('layouts.messages')s
+                    @include('layouts.messages')
                         <!-- Validation Wizard Material -->
                         <div class="js-wizard-validation-material block">
                             <!-- Step Tabs -->

@@ -46,9 +46,15 @@ Route::get('/approve/{id}', 'AgendaController@approve');
 // Route::get('/approve/{id}/{approver}', [
 // 	'as' => 'approve', 'uses' => 'AgendaController@approve']);
 
-Route::get('/plor', 'PlorController@create');
+Route::get('/plor', 'PlorController@index');
+
+Route::get('/createplor', 'PlorController@create');
+
+Route::get('/monitoring', 'PlorController@monitor');
 
 Route::post('/post_plor', 'PlorController@store');
+
+Route::get('/approvePlor/{id}', 'PlorController@approve');
 
 Route::get('/laporanfull', function () {
 	return view('pages.laporanfull');

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Agenda;
-use App\Auditee;
 use App\Contractor;
 use App\Department;
 use App\Site;
@@ -33,7 +32,7 @@ class AgendaController extends Controller
 
     public function create()
     {
-        $data['audis'] = Auditee::all();
+        $data['audis'] = User::where('status', '=', 'Auditee')->get();
         $data['auds'] = User::where('status', '=', 'Audit Supervisor')->orWhere('status', '=', 'Audit Superintendent')->orWhere('status', '=', 'Audit Manager')->orWhere('status', '=', 'Auditor')->orderBy('name')->get();
         $data['conts'] = Contractor::all();
         $data['depts'] = Department::all();

@@ -8,6 +8,7 @@ use App\Contractor;
 use App\Department;
 use App\Site;
 use App\User;
+use App\Plor;
 
 class PlorController extends Controller
 {
@@ -22,6 +23,18 @@ class PlorController extends Controller
                 return redirect('/')->with('error', 'You are not allowed');
             }
         });
+    }
+
+    public function index()
+    {
+        $data['plors'] = Plor::orderBy('id', 'asc')->paginate(5);
+        return view('pages.plor', $data);
+    }
+
+    public function monitor()
+    {
+        $data['plors'] = Plor::where('status1', '=', 'Approved')->orderBy('id', 'asc')->paginate(5);
+        return view('pages.monitoring', $data);
     }
     
     public function create()
@@ -43,9 +56,37 @@ class PlorController extends Controller
         }else return redirect('/dashboard')->with('error', 'You are not allowed');
     }
 
-    public function submitPlor(Request $request)
+    public function store(Request $request)
     {
-        dd($request);
+        $plor = new Plor;
+        $fields = $request->only($plor->getFirst());
+        $plor->proposer = $request->session()->get('user')->name;
+        $plor->fill($fields);
+        $audi = '';
+        $count = count($request->input('auditor'));
+        foreach($request->input('auditor') as $auditor){
+            $audi .= $auditor;
+            if($count > 1){
+                $audi .= ', ';
+            }
+            $count -= 1;
+        }
+        $plor->auditor = $audi;
+        $plor->status1 = 'in Lead Auditor';
+        // dd($plor);
+        $plor->save();
+
+        return redirect('/plor')->with('success', 'New Plor has been proposed, waiting approval from Lead Auditor');
+    }
+
+    public function approve($id)
+    {
+        // dd($approver);
+        $plor = Plor::find($id);
+        $plor->status1 = 'Approved';
+        $plor->save();
+        return redirect('/plor')->with('success', 'Status Change success, PLOR has been Approved');
+        //
     }
     //
 }

@@ -24,6 +24,7 @@
                 <div class="content">
                     <h2 class="content-heading font-w700">PLOR Audit</h2>
                     <div class="block">
+                    @include('layouts.messages')
                         <div class="block-content">
                             <form class="js-validation-material" action="{{url('post_plor')}}" method="post" novalidate="novalidate">
                             @csrf
@@ -94,6 +95,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <div class="form-material floating">
+                                        <input type="text" class="form-control valid" id="object" name="object" aria-describedby="object-error" aria-invalid="false">
+                                        <label for="object">Object</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <div class="form-material">
                                         <select class="js-select2 form-control" id="category" name="category" style="width: 100%;" data-placeholder="Choose Category.." tabindex="-1" aria-hidden="true">
                                             <option></option>
@@ -146,17 +153,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <td><a class="btn btn-alt-primary" data-toggle="modal" data-target="#modal-slideup"> Submit</a></td>
+                                    <button type="submit" class="btn btn-alt-primary">Submit</button>
                                 </div>
                             </form>
-
-                                <!-- Select2 (Material forms) -->
-                                <div class="col-xl-6">
-                                    <form action="be_forms_plugins.html" method="post" onsubmit="return false;">
-                                        
-                                    </form>
-                                </div>
-                                <!-- END Select2 (Material forms) -->
                         </div>
                     </div>
                 </div>
@@ -164,7 +163,7 @@
             <!-- END Main Container -->
 
             <!-- Large modal -->
-            <div class="modal fade" id="modal-slideup" tabindex="-1" role="dialog" aria-labelledby="modal-slideup" aria-hidden="true">
+            <!-- <div class="modal fade" id="modal-slideup" tabindex="-1" role="dialog" aria-labelledby="modal-slideup" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-slideup" role="document">
                     <div class="modal-content">
                         <div class="block block-themed block-transparent mb-0">
@@ -179,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Large Modal -->
 
             <!-- Footer -->
@@ -190,6 +189,7 @@
         </div>
 
         <!-- Page JS Plugins -->
+        <script src="assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
         <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
         <script src="assets/codebase/assets/js/plugins/select2/select2.full.min.js"></script>
         <!-- Page JS Code -->

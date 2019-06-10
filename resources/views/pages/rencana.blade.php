@@ -53,9 +53,9 @@
                                             <td>{{$rencana->isps_remaks}}</td>
                                             <td rowspan="5">
                                                 @if($rencana->status == 'Approved')
-                                                <p class="p-10 bg-primary font-w700 text-center text-white">{{$rencana->status}}</p>
+                                                <p class="p-10 bg-primary-light font-w700 text-center">{{$rencana->status}}</p>
                                                 @else
-                                                <p class="p-10 bg-warning font-w700 text-center">{{$rencana->status}}</p>
+                                                <p class="p-10 bg-warning-light font-w700 text-center">{{$rencana->status}}</p>
                                                 @endif
                                                 @if(session('user')->status == 'Audit Manager' && $rencana->status == 'in Reviewer')
                                                 <center>

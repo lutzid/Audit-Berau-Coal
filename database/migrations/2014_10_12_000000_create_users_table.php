@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('status');
             $table->integer('permit')->nullable();
+            $table->integer('special')->nullable();
             $table->timestamps();
         });
     }

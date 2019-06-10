@@ -18,20 +18,24 @@
                     <li class="table">
                         <a href="/rencana"><i class="si si-calendar"></i><span class="sidebar-mini-hide font-size-sm">Rencana Audit Tahunan</span></a>
                     </li>
+                    @if(session('user')->special == 1)
                     <li class="table">
                         <a href="/agenda"><i class="si si-list"></i><span class="sidebar-mini-hide font-size-sm">Agenda Audit</span></a>
                     </li>
+                    @endif
                     <li class="table">
                         <a href="/checklist"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Checklist Audit</span></a>
                     </li>
+                    @if(session('user')->special == 1)
                     <li class="table">
                         <a href="/laporan"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Laporan Audit</span></a>
                     </li>
+                    @endif
                     <li class="table">
                         <a href="/plor"><i class="si si-docs"></i><span class="sidebar-mini-hide font-size-sm">PLOR Audit</span></a>
                     </li>
                     <li class="table">
-                        <a href="#"><i class="si si-screen-desktop"></i><span class="sidebar-mini-hide font-size-sm">Monitoring Hasil Audit</span></a>
+                        <a href="/monitoring"><i class="si si-screen-desktop"></i><span class="sidebar-mini-hide font-size-sm">Monitoring Hasil Audit</span></a>
                     </li>
                     <li class="table">
                         <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-sm">Evaluasi Audit K3L</span></a>
