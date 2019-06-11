@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="due_date1" name="due_date1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                        <input type="text" class="js-datepicker form-control" id="due_date1" name="due_date1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         <label for="due_date1">Due Date</label>
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="due_date2" name="due_date2" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                        <input type="text" class="js-datepicker form-control" id="due_date2" name="due_date2" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         <label for="due_date2">Due Date</label>
                                     </div>
                                 </div>

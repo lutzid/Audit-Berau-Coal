@@ -4,6 +4,11 @@
 <!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
         @include('layouts.header')
+        <style>
+            #slide{
+                opacity : 0.5;
+            }
+        </style>
     </head>
     <body>
         <!-- Page Container -->
@@ -23,12 +28,13 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white invisible" data-toggle="appear" data-class="animated fadeInRight">
+                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white" data-toggle="appear" data-class="animated fadeInRight" id="slide">
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
-                                    <a class="link-effect font-w700" target="_blank" href="https://www.beraucoalenergy.co.id">
-                                        <span class="font-size-xl text-dark">Berau</span><span class="font-size-xl">Coal</span>
+                                    <a class="font-w700" target="_blank" href="https://www.beraucoalenergy.co.id">
+                                        <img class="img-fluid" src="{{url('img/berauwhite.png')}}">
+                                        <!-- <span class="font-size-xl text-dark">Berau</span><span class="font-size-xl">Coal</span> -->
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to K3L Audit</h1>
                                     @include('layouts.messages')

@@ -62,6 +62,8 @@ Route::get('/approvePlor/{id}', 'PlorController@approve');
 
 Route::get('/approvePJO/{id}', 'PlorController@approvePJO');
 
+Route::get('/approveFinal/{id}', 'PlorController@approveFinal');
+
 Route::get('/fillAuditee/{id}', 'PlorController@fillAuditee');
 
 Route::get('/fillOverdue/{id}', 'PlorController@fillOverdue');

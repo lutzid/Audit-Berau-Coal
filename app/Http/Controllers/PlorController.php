@@ -165,6 +165,17 @@ class PlorController extends Controller
             }
     }
 
+    public function approveFinal($id)
+    {
+        // dd($approver);
+        $plor = Plor::find($id);
+        
+        $plor->statusFinal = 'Closed';
+        $plor->save();
+
+        return redirect('/monitoring')->with('success', 'Status Change success, PLOR has been Closed');
+    }
+
     public function fillAuditee($id)
     {
         $data['plor'] = Plor::find($id);

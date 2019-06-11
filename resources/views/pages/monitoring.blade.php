@@ -42,6 +42,7 @@
                                             <th>Auditee Previlege</th>
                                             <th>Approver</th>
                                             <th>Overdue</th>
+                                            <th>Note</th>
                                             <th>Status</th>
                                             
                                         </tr>
@@ -60,11 +61,11 @@
                                             <td>{{$plor->object}}</td>
                                             <td>{{$plor->category}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef" data-smkp="{{$plor->smkp}}" data-smk3="{{$plor->smk3}}" data-ohsas="{{$plor->ohsas}}" data-iso="{{$plor->iso}}" data-begems="{{$plor->begems}}" data-problem="{{$plor->problem}}" data-location="{{$plor->location}}" data-object="{{$plor->object}}">
+                                                <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef" data-smkp="{{$plor->smkp}}" data-smk3="{{$plor->smk3}}" data-ohsas="{{$plor->ohsas}}" data-iso="{{$plor->iso}}" data-begems="{{$plor->begems}}">
                                                     Detail
                                                 </a>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef2" data-root="{{$plor->root}}" data-corrective="{{$plor->corrective}}" data-due_date1="{{$plor->due_date1}}" data-pj1="{{$plor->pj1}}" data-eviden="{{$plor->eviden}}" data-preventive="{{$plor->preventive}}" data-due_date2="{{$plor->due_date2}}" data-pj2="{{$plor->pj2}}">
                                                     Show
                                                 </a>
@@ -72,24 +73,34 @@
                                                 <a href="/fillAuditee/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
                                             </td>
-                                            <td>
-                                                <p class="h6">
+                                            <td class="text-center">
+                                                <p class="font-w700">
                                                 {{$plor->status2}}
                                                 </p>
                                                 @if((session('user')->username == 'pjo' || session('user')->username == 'depthead' ) && $plor->status2 != 'Approved')
                                                 <a href="/approvePJO/{{$plor->id}}" class="btn btn-outline-primary">Approve</a>
                                                 @endif
                                             </td>
-                                            <td>
-                                                <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef3" data-expired="{{$plor->expired}}" data-reason="{{$plor->reason}}" data-note="{{$plor->note}}">
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef3" data-expired="{{$plor->expired}}" data-reason="{{$plor->reason}}">
                                                     Show
                                                 </a>
                                                 @if(session('user')->status == 'Auditee')
                                                 <a href="/fillOverdue/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
+                                            </td>{{$plor->note}}<td>
                                             </td>
+                                            @if($plor->statusFinal == 'Closed')
+                                            <td class="text-center bg-danger-light">
+                                            @else
                                             <td class="text-center">
-                                                {{$plor->statusFinal}}
+                                            @endif
+                                                <p class="font-w700">                                            
+                                                    {{$plor->statusFinal}}
+                                                </p>
+                                                @if((session('user')->status == 'Audit Supervisor' || session('user')->status == 'Audit Superintendent') && $plor->statusFinal != 'Closed')
+                                                <a href="/approveFinal/{{$plor->id}}" class="btn btn-outline-primary">Approve</a>
+                                                @endif
                                             </td>
                                         </tr>
                                         @endforeach
@@ -229,10 +240,6 @@
                                             <td>Reason</td>
                                             <td id="modal-reason"></td>
                                         </tr>
-                                        <tr>
-                                            <td>Note from Auditor</td>
-                                            <td id="modal-note"></td>
-                                        </tr>
                                     </table>
                                 </div>
                                 
@@ -277,7 +284,7 @@
             });
         });
 
-        var ATTRIBUTES2 = ['problem', 'location', 'object', 'smkp', 'smk3', 'ohsas', 'iso', 'begems'];
+        var ATTRIBUTES2 = ['smkp', 'smk3', 'ohsas', 'iso', 'begems'];
 
         $('[data-toggle="modal"]').on('click', function (e) {
             
@@ -295,8 +302,7 @@
 
         var ATTRIBUTES3 = [
             'expired',
-            'reason',
-            'note',
+            'reason'
         ];
 
         $('[data-toggle="modal"]').on('click', function (e) {
