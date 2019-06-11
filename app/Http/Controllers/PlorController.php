@@ -73,36 +73,64 @@ class PlorController extends Controller
         }
         $plor->auditor = $audi;
         $plor->status1 = 'in Lead Auditor';
-        if(substr_compare($plor->depcont, "CV", 0, 2, true) == 0){
-            $plor->type = 2;
-        }
-        else if(substr_compare($plor->depcont, "PT", 0, 2, true) == 0){
-            $plor->type = 2;
-        }
-        else if(substr_compare($plor->depcont, "Koperasi", 0, 8, true) == 0){
-            $plor->type = 2;
-        }
-        else
+        $dept = Department::where('name', '=', $plor->depcont)->first();
+        $cont = Contractor::where('name', '=', $plor->depcont)->first();
+        if($dept){
             $plor->type = 1;
-        // if($request->filled('smkp')){
-        //     $plor->smkp = $request->input('smkp');
-        // }
-        // if($request->filled('smk3')){
-        //     $plor->smk3 = $request->input('smk3');
-        // }
-        // if($request->filled('ohsas')){
-        //     $plor->ohsas = $request->input('ohsas');
-        // }
-        // if($request->filled('iso')){
-        //     $plor->iso = $request->input('iso');
-        // }
-        // if($request->filled('begems')){
-        //     $plor->begems = $request->input('begems');
-        // }
-        // dd($plor);
+        }else if($cont){
+            $plor->type = 2;
+        }
+
         $plor->save();
 
         return redirect('/plor')->with('success', 'New Plor has been proposed, waiting approval from Lead Auditor');
+    }
+
+    public function viewEdit($id){
+        $data['plor'] = Plor::find($id);
+        $data['auds'] = User::where('status', '=', 'Audit Supervisor')->orWhere('status', '=', 'Audit Superintendent')->orWhere('status', '=', 'Audit Manager')->orWhere('status', '=', 'Auditor')->orderBy('name')->get();
+        $data['conts'] = Contractor::all();
+        $data['depts'] = Department::all();
+        $data['sites'] = Site::all();
+        $data['cats'] = Category::all();
+        $data['apps'] = User::where('name', '=', 'Ezra Boron')
+                        ->orWhere('name', '=', 'Andhi H')
+                        ->orWhere('name', '=', 'Suhendrawan')
+                        ->orWhere('name', '=', 'Luhut Lumban Raja')
+                        ->orWhere('name', '=', 'Anisa Nanhidayah')
+                        ->orderBy('name')->get();
+
+        return view('pages.editplor', $data);
+    }
+
+    public function edit(Request $request, $id)
+    {
+        $plor = Plor::find($id);
+        $fields = $request->only($plor->getFirst());
+        $plor->proposer = $request->session()->get('user')->name;
+        $plor->fill($fields);
+        $audi = '';
+        $count = count($request->input('auditor'));
+        foreach($request->input('auditor') as $auditor){
+            $audi .= $auditor;
+            if($count > 1){
+                $audi .= ', ';
+            }
+            $count -= 1;
+        }
+        $plor->auditor = $audi;
+        $plor->status1 = 'in Lead Auditor';
+        $dept = Department::where('name', '=', $plor->depcont)->first();
+        $cont = Contractor::where('name', '=', $plor->depcont)->first();
+        if($dept){
+            $plor->type = 1;
+        }else if($cont){
+            $plor->type = 2;
+        }
+
+        $plor->save();
+
+        return redirect('/plor')->with('success', 'Plor has been Edited');
     }
 
     public function approve($id)

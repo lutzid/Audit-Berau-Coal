@@ -88,7 +88,9 @@
                                                 <a href="/fillOverdue/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
                                             </td>
-                                            <td class="h6">{{$plor->statusFinal}}</td>
+                                            <td class="text-center">
+                                                {{$plor->statusFinal}}
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

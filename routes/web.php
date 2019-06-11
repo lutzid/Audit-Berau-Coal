@@ -50,6 +50,10 @@ Route::get('/plor', 'PlorController@index');
 
 Route::get('/createplor', 'PlorController@create');
 
+Route::get('/editplor/{id}', 'PlorController@viewEdit');
+
+Route::post('/edit_plor/{id}', 'PlorController@edit');
+
 Route::get('/monitoring', 'PlorController@monitor');
 
 Route::post('/post_plor', 'PlorController@store');

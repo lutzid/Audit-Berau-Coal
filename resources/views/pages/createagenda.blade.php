@@ -83,13 +83,13 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="from" name="from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                        <input type="text" class="js-datepicker form-control" id="from" name="from" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         <label for="from">From</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material floating open">
-                                        <input type="text" class="js-datepicker form-control" id="to" name="to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yy" placeholder="dd/mm/yy">
+                                        <input type="text" class="js-datepicker form-control" id="to" name="to" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         <label for="to">To</label>
                                     </div>
                                 </div>
