@@ -73,6 +73,21 @@ class PlorController extends Controller
         }
         $plor->auditor = $audi;
         $plor->status1 = 'in Lead Auditor';
+        // if($request->filled('smkp')){
+        //     $plor->smkp = $request->input('smkp');
+        // }
+        // if($request->filled('smk3')){
+        //     $plor->smk3 = $request->input('smk3');
+        // }
+        // if($request->filled('ohsas')){
+        //     $plor->ohsas = $request->input('ohsas');
+        // }
+        // if($request->filled('iso')){
+        //     $plor->iso = $request->input('iso');
+        // }
+        // if($request->filled('begems')){
+        //     $plor->begems = $request->input('begems');
+        // }
         // dd($plor);
         $plor->save();
 

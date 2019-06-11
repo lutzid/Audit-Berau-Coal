@@ -26,11 +26,11 @@ class CreatePlorsTable extends Migration
             $table->string('location');
             $table->string('object');
             $table->string('category');
-            $table->string('smkp');
-            $table->string('smk3');
-            $table->string('ohsas');
-            $table->string('iso');
-            $table->string('begems');
+            $table->string('smkp')->nullable();
+            $table->string('smk3')->nullable();
+            $table->string('ohsas')->nullable();
+            $table->string('iso')->nullable();
+            $table->string('begems')->nullable();
             $table->string('approver');
             $table->string('status1')->nullable();
             $table->string('root')->nullable()->default('Belum diisi');
