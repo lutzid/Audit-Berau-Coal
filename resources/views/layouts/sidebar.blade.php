@@ -15,14 +15,14 @@
             <!-- END Side Header -->
             <div class="content-side content-side-full">
                 <ul class="nav-main">
+                    @if(session('user')->special == 1)
                     <li class="table">
                         <a href="/rencana"><i class="si si-calendar"></i><span class="sidebar-mini-hide font-size-sm">Rencana Audit Tahunan</span></a>
                     </li>
-                    @if(session('user')->special == 1)
+                    @endif
                     <li class="table">
                         <a href="/agenda"><i class="si si-list"></i><span class="sidebar-mini-hide font-size-sm">Agenda Audit</span></a>
                     </li>
-                    @endif
                     <li class="table">
                         <a href="/checklist"><i class="si si-doc"></i><span class="sidebar-mini-hide font-size-sm">Checklist Audit</span></a>
                     </li>
@@ -37,12 +37,7 @@
                     <li class="table">
                         <a href="/monitoring"><i class="si si-screen-desktop"></i><span class="sidebar-mini-hide font-size-sm">Monitoring Hasil Audit</span></a>
                     </li>
-                    <li class="table">
-                        <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-sm">Evaluasi Audit K3L</span></a>
-                    </li>
-                    <li class="table">
-                        <a href="#"><i class="si si-note"></i><span class="sidebar-mini-hide font-size-sm">Surat dan IM</span></a>
-                    </li>
+                    
                 </ul>
 
             </div>

@@ -33,7 +33,6 @@
                                 <table class="table table-striped table-vcenter table-bordered">
                                     <thead>
                                         <tr class="bg-gd-earth text-white text-center font-w700 h6">
-                                            <th>Proposer</th>
                                             <th>Departemen/Kontraktor</th>
                                             <th>Site</th>
                                             <th>Audit Scope</th>
@@ -51,7 +50,6 @@
                                     <tbody>
                                         @foreach($agendas as $agenda)
                                         <tr>
-                                            <td>{{$agenda->proposer}}</td>
                                             <td>{{$agenda->depcont}}</td>
                                             <td>{{$agenda->site}}</td>
                                             <td>{{$agenda->scope}}</td>

@@ -37,7 +37,7 @@
                                             <th>Category</th>
                                             <th>Details</th>
                                             <th>Auditee Previlege</th>
-                                            <th>Approver PJO</th>
+                                            <th>Approver</th>
                                             <th>Overdue</th>
                                             <th>Status</th>
                                             
