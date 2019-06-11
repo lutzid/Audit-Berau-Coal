@@ -23,11 +23,6 @@
                     <h2 class="content-heading font-w700">Monitoring Hasil Audit</h2>
                     <div class="block">
                     @include('layouts.messages')
-                        <!-- <div class="block-header">
-                            @if(session('user')->permit == 1)
-                            <div><a class="btn btn-success" href="/createagenda"> Create</a></div>
-                            @endif
-                        </div> -->
                         <div class="block-content">
                             <div class="table-responsive">
                                 <table class="table table-striped table-vcenter table-bordered">
@@ -42,9 +37,8 @@
                                             <th>Category</th>
                                             <th>Details</th>
                                             <th>Auditee Previlege</th>
-                                            @if(session('user')->status == 'pjo')
-                                            <th>Action</th>
-                                            @endif
+                                            <th>Approver PJO</th>
+                                            <th>Overdue</th>
                                             <th>Status</th>
                                             
                                         </tr>
@@ -68,22 +62,27 @@
                                                 <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef2" data-root="{{$plor->root}}" data-corrective="{{$plor->corrective}}" data-due_date1="{{$plor->due_date1}}" data-pj1="{{$plor->pj1}}" data-eviden="{{$plor->eviden}}" data-preventive="{{$plor->preventive}}" data-due_date2="{{$plor->due_date2}}" data-pj2="{{$plor->pj2}}">
                                                     Show
                                                 </a>
-                                                @if(session('user')->status == 'auditee')
-                                                <a href="/fillPlor/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
+                                                @if(session('user')->status == 'Auditee')
+                                                <a href="/fillAuditee/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
                                             </td>
-                                            @if(session('user')->status == 'pjo')
-                                            <td><a href="/fillPlor/{{$plor->id}}" class="btn btn-outline-info">Approve</a></td>
-                                            @endif
-                                            <td>{{$plor->status2}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef2" data-expired="{{$plor->expired}}" data-reason="{{$plor->reason}}" data-note="{{$plor->note}}">
+                                                <p class="h6">
+                                                {{$plor->status2}}
+                                                </p>
+                                                @if(session('user')->username == 'pjo' && $plor->status2 != 'Approved')
+                                                <a href="/approvePJO/{{$plor->id}}" class="btn btn-outline-primary">Approve</a>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myRef3" data-expired="{{$plor->expired}}" data-reason="{{$plor->reason}}" data-note="{{$plor->note}}">
                                                     Show
                                                 </a>
-                                                @if(session('user')->status == 'auditee')
-                                                <a href="/fillPlor/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
+                                                @if(session('user')->status == 'Auditee')
+                                                <a href="/fillOverdue/{{$plor->id}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
                                             </td>
+                                            <td class="h6">{{$plor->statusFinal}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

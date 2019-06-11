@@ -56,6 +56,12 @@ Route::post('/post_plor', 'PlorController@store');
 
 Route::get('/approvePlor/{id}', 'PlorController@approve');
 
+Route::get('/approvePJO/{id}', 'PlorController@approvePJO');
+
+Route::get('/fillAuditee/{id}', 'PlorController@fillAuditee');
+
+Route::get('/fillOverdue/{id}', 'PlorController@fillOverdue');
+
 Route::get('/laporanfull', function () {
 	return view('pages.laporanfull');
 });

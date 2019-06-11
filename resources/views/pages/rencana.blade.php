@@ -55,7 +55,7 @@
                                                 @if($rencana->status == 'Approved')
                                                 <p class="p-10 bg-primary-light font-w700 text-center">{{$rencana->status}}</p>
                                                 @else
-                                                <p class="p-10 bg-warning-light font-w700 text-center">{{$rencana->status}}</p>
+                                                <p class="p-10 bg-warning-  font-w700 text-center">{{$rencana->status}}</p>
                                                 @endif
                                                 @if(session('user')->status == 'Audit Manager' && $rencana->status == 'in Reviewer')
                                                 <center>
@@ -70,8 +70,8 @@
                                                         Approve
                                                     </a>
                                                 </center>
+                                                @endif
                                             </td>
-                                            @endif
                                         </tr>
                                         <tr>
                                             <td>Special Audit</td>

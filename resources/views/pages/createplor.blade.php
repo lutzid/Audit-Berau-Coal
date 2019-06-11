@@ -162,25 +162,6 @@
             </main>
             <!-- END Main Container -->
 
-            <!-- Large modal -->
-            <!-- <div class="modal fade" id="modal-slideup" tabindex="-1" role="dialog" aria-labelledby="modal-slideup" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-slideup" role="document">
-                    <div class="modal-content">
-                        <div class="block block-themed block-transparent mb-0">
-                            <div class="block-content">
-                                <button type="button" class="btn btn-lg btn-circle btn-primary mr-5 mb-5 pull-right" data-dismiss="modal" aria-label="Close">
-                                    <i class="fa fa-times"></i>
-                                </button>
-                                <p class="text-left">
-                                    <span class="font-w700 mr-5 font-size-h2 text-primary">Plor Telah Tersubmit</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- End Large Modal -->
-
             <!-- Footer -->
             <footer id="page-footer" class="bg-white">
                 @include('layouts.footer')

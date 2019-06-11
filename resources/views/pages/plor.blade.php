@@ -24,9 +24,9 @@
                     <div class="block">
                     @include('layouts.messages')
                         <div class="block-header">
-                            <!-- @if(session('user')->permit == 1) -->
+                            @if(session('user')->status == 'Audit Supervisor' || session('user')->status == 'Audit Superintendent')
                             <div><a class="btn btn-success" href="/createplor"> Create</a></div>
-                            <!-- @endif -->
+                            @endif
                         </div>
                         <div class="block-content">
                             <div class="table-responsive">

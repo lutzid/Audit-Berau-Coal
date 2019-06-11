@@ -88,5 +88,33 @@ class PlorController extends Controller
         return redirect('/plor')->with('success', 'Status Change success, PLOR has been Approved');
         //
     }
+
+    public function approvePJO($id)
+    {
+        // dd($approver);
+        $plor = Plor::find($id);
+        $plor->status2 = 'Approved';
+        $plor->save();
+        return redirect('/monitoring')->with('success', 'Status Change success, PLOR has been Approved');
+        //
+    }
+
+    public function fillAuditee($id)
+    {
+        $data['plor'] = Plor::find($id);
+
+        // dd($plor->no_nc);
+        return view('pages.fillAuditee', $data);
+        //
+    }
+
+    public function fillOverdue($id)
+    {
+        $data['plor'] = Plor::find($id);
+
+        // dd($plor->no_nc);
+        return view('pages.fillOverdue', $data);
+        //
+    }
     //
 }
