@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-material">
-                                        <select class="js-select2 form-control" id="auditee" name="auditee" style="width: 100%;" data-placeholder="Choose Auditee.." tabindex="-1" aria-hidden="true">
+                                        <select class="js-select2 form-control" id="auditee" name="auditee[]" style="width: 100%;" data-placeholder="Choose Auditee(1 or more).." tabindex="-1" aria-hidden="true" multiple="multiple">
                                             <option></option>
                                             @foreach($audis as $audi)
                                             <option value="{{$audi->name}}">{{$audi->name}}</option>

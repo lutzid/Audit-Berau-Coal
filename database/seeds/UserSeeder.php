@@ -43,6 +43,7 @@ class UserSeeder extends Seeder
         insertUser('Penanggung Jawab Operasi', 'pjo', '123456', 0, 0, 'Auditee');
         insertUser('Department Head', 'depthead', '123456', 0, 0, 'Auditee');
         insertUser('Section Head', 'secthead', '123456', 0, 0, 'Auditee');
+        insertUser('Safety Contractor', 'safety', '123456', 0, 0, 'Auditee');
         insertUser('General User', 'umum', '123456', 0, 0, 'General User');
         //
     }

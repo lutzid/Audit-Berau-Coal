@@ -23,6 +23,7 @@ class AuditeeSeeder extends Seeder
         insertAuditee('PJO');
         insertAuditee('Dept Head');
         insertAuditee('Section Head');
+        insertAuditee('Safety Contractor');
         //
     }
 }

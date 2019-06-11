@@ -33,6 +33,7 @@ class CreatePlorsTable extends Migration
             $table->string('begems')->nullable();
             $table->string('approver');
             $table->string('status1')->nullable();
+            $table->integer('type')->default(0);
             $table->string('root')->nullable()->default('Belum diisi');
             $table->string('corrective')->nullable()->default('Belum diisi');
             $table->date('due_date1')->nullable();

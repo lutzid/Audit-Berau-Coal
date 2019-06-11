@@ -73,6 +73,17 @@ class PlorController extends Controller
         }
         $plor->auditor = $audi;
         $plor->status1 = 'in Lead Auditor';
+        if(substr_compare($plor->depcont, "CV", 0, 2, true) == 0){
+            $plor->type = 2;
+        }
+        else if(substr_compare($plor->depcont, "PT", 0, 2, true) == 0){
+            $plor->type = 2;
+        }
+        else if(substr_compare($plor->depcont, "Koperasi", 0, 8, true) == 0){
+            $plor->type = 2;
+        }
+        else
+            $plor->type = 1;
         // if($request->filled('smkp')){
         //     $plor->smkp = $request->input('smkp');
         // }
@@ -108,28 +119,67 @@ class PlorController extends Controller
     {
         // dd($approver);
         $plor = Plor::find($id);
-        $plor->status2 = 'Approved';
-        $plor->save();
-        return redirect('/monitoring')->with('success', 'Status Change success, PLOR has been Approved');
-        //
+            if($plor->type == 2){
+                if(session()->get('user')->username == 'pjo'){
+                    $plor->status2 = 'Approved';
+                    $plor->save();
+                    return redirect('/monitoring')->with('success', 'Status Change success, PLOR has been Approved');
+                }
+                return redirect('/monitoring')->with('error', 'You are not allowed to approve');
+            }
+            else if($plor->type == 1){
+                if(session()->get('user')->username == 'depthead'){
+                    $plor->status2 = 'Approved';
+                    $plor->save();
+                    return redirect('/monitoring')->with('success', 'Status Change success, PLOR has been Approved');
+                }
+                return redirect('/monitoring')->with('error', 'You are not allowed to approve');
+            }
     }
 
     public function fillAuditee($id)
     {
         $data['plor'] = Plor::find($id);
-
+        $plor = Plor::find($id);
         // dd($plor->no_nc);
-        return view('pages.fillAuditee', $data);
-        //
+        if($plor->type == 2){
+            if(session()->get('user')->username == 'safety'){
+                return view('pages.fillAuditee', $data);
+            }
+            else{
+                return redirect('/monitoring')->with('error', 'You are not allowed to fill');
+            }
+        }
+        else if($plor->type == 1){
+            if(session()->get('user')->username == 'secthead'){
+                return view('pages.fillAuditee', $data);
+            }
+            else{
+                return redirect('/monitoring')->with('error', 'You are not allowed to fill');
+            }
+        }
     }
 
     public function fillOverdue($id)
     {
         $data['plor'] = Plor::find($id);
-
+        $plor = Plor::find($id);
         // dd($plor->no_nc);
-        return view('pages.fillOverdue', $data);
-        //
+        if($plor->type == 2){
+            if(session()->get('user')->username == 'safety'){
+                return view('pages.fillOverdue', $data);
+            }
+            else{
+                return redirect('/monitoring')->with('error', 'You are not allowed to fill');
+            }
+        }
+        else if($plor->type == 1){
+            if(session()->get('user')->username == 'secthead'){
+                return view('pages.fillOverdue', $data);
+            }
+            else{
+                return redirect('/monitoring')->with('error', 'You are not allowed to fill');
+            }
+        }
     }
-    //
 }

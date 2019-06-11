@@ -51,7 +51,16 @@ class AgendaController extends Controller
         $agenda->depcont = $data['depcont'];
         $agenda->site = $data['site'];
         $agenda->scope = $data['scope'];
-        $agenda->auditee = $data['auditee'];
+        $audite = '';
+        $count = count($data['auditee']);
+        foreach($data['auditee'] as $auditee){
+            $audite .= $auditee;
+            if($count > 1){
+                $audite .= ', ';
+            }
+            $count -= 1;
+        }
+        $agenda->auditee = $audite;
         $audi = '';
         $count = count($data['auditor']);
         foreach($data['auditor'] as $auditor){

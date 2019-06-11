@@ -25,6 +25,7 @@ class Plor extends Model
         'begems',
         'approver',
         'status1',
+        'type',
         'root',
         'corrective',
         'due_date1',

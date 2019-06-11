@@ -39,6 +39,9 @@
                                             <th>Site</th>
                                             <th>Date</th>
                                             <th>Auditor</th>
+                                            <th>Problem</th>
+                                            <th>Location</th>
+                                            <th>Object</th>
                                             <th>Category</th>
                                             <th>Approver</th>
                                             <th>Details</th>
@@ -56,6 +59,9 @@
                                             <td>{{$plor->site}}</td>
                                             <td>{{$plor->date}}</td>
                                             <td>{{$plor->auditor}}</td>
+                                            <td>{{$plor->problem}}</td>
+                                            <td>{{$plor->location}}</td>
+                                            <td>{{$plor->object}}</td>
                                             <td>{{$plor->category}}</td>
                                             <td>{{$plor->approver}}</td>
                                             <td>
@@ -105,18 +111,6 @@
                             <div class="block-content">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-vcenter">
-                                        <tr>
-                                            <td>Problem</td>
-                                            <td id="modal-problem"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Location</td>
-                                            <td id="modal-location"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Object</td>
-                                            <td id="modal-object"></td>
-                                        </tr>
                                         <tr>
                                             <td>Reference SMKP</td>
                                             <td id="modal-smkp"></td>
