@@ -12,6 +12,7 @@ use App\Plor;
 
 class PlorController extends Controller
 {
+    // Untuk mengecek apakah user telah login atau belum, apabila belum maka user akan dikembalikan ke halaman awal
     public function __construct()
     {
         $this->middleware(function ($request, $next){
@@ -25,18 +26,21 @@ class PlorController extends Controller
         });
     }
 
+    // Untuk menampilkan halaman plor
     public function index()
     {
         $data['plors'] = Plor::orderBy('id', 'asc')->paginate(5);
         return view('pages.plor', $data);
     }
 
+    // Untuk menampilkan halaman monitoring
     public function monitor()
     {
         $data['plors'] = Plor::where('status1', '=', 'Approved')->orderBy('id', 'asc')->paginate(5);
         return view('pages.monitoring', $data);
     }
-    
+
+    // Untuk menampilkan halaman create plor untuk user tertentu, selain user yang ditentukan maka akan dikembalikan ke halaman utama
     public function create()
     {
         if(session()->get('user')->status == 'Audit Supervisor' || session()->get('user')->status == 'Audit Superintendent'){
@@ -56,6 +60,7 @@ class PlorController extends Controller
         }else return redirect('/dashboard')->with('error', 'You are not allowed');
     }
 
+    // Untuk menyimpan data yang telah diisikan di form plor
     public function store(Request $request)
     {
         $plor = new Plor;
@@ -86,6 +91,7 @@ class PlorController extends Controller
         return redirect('/plor')->with('success', 'New Plor has been proposed, waiting approval from Lead Auditor');
     }
 
+    // Untuk menampilkan halaman edit untuk akun tertentu
     public function viewEdit($id){
         $data['plor'] = Plor::find($id);
         $data['auds'] = User::where('status', '=', 'Audit Supervisor')->orWhere('status', '=', 'Audit Superintendent')->orWhere('status', '=', 'Audit Manager')->orWhere('status', '=', 'Auditor')->orderBy('name')->get();
@@ -103,6 +109,7 @@ class PlorController extends Controller
         return view('pages.editplor', $data);
     }
 
+    // Untuk melakukan edit plor 
     public function edit(Request $request, $id)
     {
         $plor = Plor::find($id);
@@ -133,6 +140,7 @@ class PlorController extends Controller
         return redirect('/plor')->with('success', 'Plor has been Edited');
     }
 
+    // Untuk melakukan approve plor yang dilakukan oleh approver
     public function approve($id)
     {
         // dd($approver);
@@ -143,6 +151,7 @@ class PlorController extends Controller
         //
     }
 
+    // Untuk melakukan approve monitoring oleh pjo apabila contractor dan approve oleh depthead apabila department
     public function approvePJO($id)
     {
         // dd($approver);
@@ -165,6 +174,7 @@ class PlorController extends Controller
             }
     }
 
+    // Untuk melakukan approve final oleh auditor pada monitoring 
     public function approveFinal($id)
     {
         // dd($approver);
@@ -176,6 +186,7 @@ class PlorController extends Controller
         return redirect('/monitoring')->with('success', 'Status Change success, PLOR has been Closed');
     }
 
+    // Untuk melakukan pengisian data tambahan monitoring oleh safety apabila contractor dan section head apabila department
     public function fillAuditee($id)
     {
         $data['plor'] = Plor::find($id);
@@ -199,6 +210,7 @@ class PlorController extends Controller
         }
     }
 
+    // Untuk melakukan pengisian data tambahan monitoring oleh safety apabila contractor dan section head apabila department
     public function fillOverdue($id)
     {
         $data['plor'] = Plor::find($id);

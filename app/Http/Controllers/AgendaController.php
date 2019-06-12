@@ -1,5 +1,5 @@
 <?php
-
+// Controller untuk menu Agenda
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -10,7 +10,8 @@ use App\Site;
 use App\User;
 
 class AgendaController extends Controller
-{
+{   
+    // Untuk mengecek apakah user telah login atau belum, apabila belum maka user akan dikembalikan ke halaman awal
     public function __construct()
     {
         $this->middleware(function ($request, $next){
@@ -24,12 +25,14 @@ class AgendaController extends Controller
         });
     }
 
+    // Untuk menampilkan halaman agenda
     public function index()
     {
         $data['agendas'] = Agenda::all();
         return view('pages.agenda', $data);
     }
 
+    // Untuk menampilkan menu create agenda untuk user tertentu
     public function create()
     {
         $data['audis'] = User::where('status', '=', 'Auditee')->get();
@@ -42,6 +45,7 @@ class AgendaController extends Controller
         return view('pages.createagenda', $data);
     }
 
+    // Untuk menyimpan data yang telah diisikan di form agenda
     public function store(Request $request)
     {
         $data = $request->input();
@@ -81,6 +85,7 @@ class AgendaController extends Controller
         return redirect('/agenda')->with('success', 'New Agenda has been proposed, waiting approval from Audit Manager');
     }
 
+    // Untuk melakukan approve yang dilakukan oleh reviewer 
     public function approveAM($id)
     {
         $agenda = Agenda::find($id);
@@ -90,6 +95,7 @@ class AgendaController extends Controller
         //
     }
 
+    // Untuk melakukan approve yang dilakukan oleh general manager
     public function approveGM($id)
     {
         $agenda = Agenda::find($id);
@@ -99,6 +105,7 @@ class AgendaController extends Controller
         //
     }
 
+    // Untuk melakukan approve yang dilakukan leh approver
     public function approve($id)
     {
         // dd($approver);

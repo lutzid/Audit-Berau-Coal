@@ -7,6 +7,7 @@ use App\Rencana;
 
 class RencanaController extends Controller
 {
+    // Untuk mengecek apakah user telah login atau belum, apabila belum maka user akan dikembalikan ke halaman awal
     public function __construct()
     {
         $this->middleware(function ($request, $next){
@@ -20,17 +21,20 @@ class RencanaController extends Controller
         });
     }
     
+    // Untuk menampilkan halaman rencana
     public function index()
     {
         $data['rencanas'] = Rencana::orderBy('id', 'asc')->paginate(2);
         return view('pages.rencana', $data);
     }
 
+    // Untuk menampilkan halaman create rencana
     public function create()
     {
         return view('pages.createrencana');
     }
 
+    // Untuk menyimpan data yang telah diisikan di form rencana
     public function store(Request $request)
     {
         $rencana = new Rencana;
@@ -43,6 +47,7 @@ class RencanaController extends Controller
         return redirect('/rencana')->with('success', 'New Rencana has been proposed, waiting approval from Audit Manager');
     }
 
+    // Untuk melakukan approve yang dilakukan oleh Audit Manager
     public function approverAM($id)
     {
         $rencana = Rencana::find($id);
@@ -52,6 +57,7 @@ class RencanaController extends Controller
         //
     }
 
+    // Untuk melakukan approve yang dilakukan oleh General Manager
     public function approverGM($id)
     {
         $rencana = Rencana::find($id);

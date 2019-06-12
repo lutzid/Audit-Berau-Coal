@@ -1,3 +1,4 @@
+<!-- Untuk menampilkan halaman form plor  -->
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

@@ -1,4 +1,4 @@
-
+<!-- Untuk menampilkan sidebar yang berisi menu audit -->
 <nav id="sidebar" style="width:20%">
     <!-- Sidebar Scroll Container -->
     <div id="sidebar-scroll">
