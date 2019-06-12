@@ -27,8 +27,6 @@
                         <div class="block-content">
                             <div class="row justify-content-center py-20">
                                 <div class="col-xl-6">
-                                    <!-- jQuery Validation (.js-validation-material class is initialized in js/pages/be_forms_validation.js) -->
-                                    <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
                                     <form class="js-validation-material" action="" method="post">
                                         <div class="form-group">
                                             <div class="form-material">

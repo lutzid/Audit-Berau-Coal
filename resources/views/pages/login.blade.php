@@ -34,7 +34,6 @@
                                 <div class="px-30 py-10">
                                     <a class="font-w700" target="_blank" href="https://www.beraucoalenergy.co.id">
                                         <img class="img-fluid" src="{{url('img/berauwhite.png')}}">
-                                        <!-- <span class="font-size-xl text-dark">Berau</span><span class="font-size-xl">Coal</span> -->
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to K3L Audit</h1>
                                     @include('layouts.messages')
@@ -43,8 +42,6 @@
                                 <!-- END Header -->
 
                                 <!-- Sign In Form -->
-                                <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.js) -->
-                                <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
                                 <form class="js-validation-signin px-30" action="{{url('login_user')}}" method="post">
                                     @csrf
                                     <div class="form-group row">

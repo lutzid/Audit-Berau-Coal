@@ -43,11 +43,7 @@
 </div>
 <!-- END Header Content -->
 
-<!-- Header Search -->
-<!-- END Header Search -->
-
 <!-- Header Loader -->
-<!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
 <div id="page-header-loader" class="overlay-header bg-primary">
     <div class="content-header content-header-fullrow text-center">
         <div class="content-header-item">

@@ -25,6 +25,7 @@
                     @include('layouts.messages')
                         <div class="block-content">
                             <div class="table-responsive">
+                                <h5 class="col-0">Open: 2 Closed: 2</h2>
                                 <table class="table table-striped table-vcenter table-bordered">
                                     <thead>
                                         <tr class="bg-gd-earth text-white text-center font-w700 h6">

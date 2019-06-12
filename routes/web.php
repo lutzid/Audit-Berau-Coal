@@ -43,9 +43,6 @@ Route::get('/approveGM/{id}', 'AgendaController@approveGM');
 
 Route::get('/approve/{id}', 'AgendaController@approve');
 
-// Route::get('/approve/{id}/{approver}', [
-// 	'as' => 'approve', 'uses' => 'AgendaController@approve']);
-
 Route::get('/plor', 'PlorController@index');
 
 Route::get('/createplor', 'PlorController@create');

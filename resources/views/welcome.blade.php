@@ -19,28 +19,17 @@
                     </a>
                     <!-- END Left Section -->
 
-                    <!-- Middle Section -->
-                    <!-- END Middle Section -->
-
                     <!-- Right Section -->
                     <div class="content-header-section">
-                        <!-- Color Themes + A few of the many header options (used just for demonstration) -->
-                        <!-- Themes functionality initialized in Codebase() -> uiHandleTheme() -->
-                        <!-- END Color Themes + A few of the many header options -->
                         <div class="content-header-section">
                             <img class="img-fluid" src="{{asset('assets/codebase/assets/img/logos/berauwhite.png')}}">
                         </div>
-                        <!-- END Toggle Sidebar -->
                     </div>
                     <!-- END Right Section -->
                 </div>
                 <!-- END Header Content -->
 
-                <!-- Header Search -->
-                <!-- END Header Search -->
-
                 <!-- Header Loader -->
-                <!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
                 <div id="page-header-loader" class="overlay-header bg-primary">
                     <div class="content-header content-header-fullrow text-center">
                         <div class="content-header-item">
@@ -66,8 +55,6 @@
                         <div class="block-content">
                             <div class="row justify-content-center py-20">
                                 <div class="col-xl-6">
-                                    <!-- jQuery Validation (.js-validation-bootstrap class is initialized in js/pages/be_forms_validation.js) -->
-                                    <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
                                     <form class="js-validation-bootstrap" action="be_forms_validation.html" method="post">
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-username">Username <span class="text-danger">*</span></label>
@@ -110,15 +97,6 @@
 
             <!-- Footer -->
             <footer id="page-footer" class="opacity-0">
-                <!-- <div class="content py-20 font-size-xs clearfix">
-                    <div class="float-right">
-                        Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
-                    </div>
-                    <div class="float-left">
-                        <a class="font-w600" href="https://goo.gl/po9Usv" target="_blank">Codebase 2.0</a> &copy; <span class="js-year-copy">2017</span>
-                    </div>
-                </div> -->
-                <!-- <a class="font-w600" href="https://goo.gl/po9Usv">Tentang kita</a> -->
             </footer>
             <!-- END Footer -->
         </div>
