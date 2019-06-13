@@ -1,4 +1,4 @@
-<!-- Untuk menampilkan halaman monitoring -->
+<!-- Untuk menampilkan halaman laporan monitoring -->
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
