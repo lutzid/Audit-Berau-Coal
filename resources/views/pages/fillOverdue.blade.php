@@ -24,7 +24,7 @@
                     <div class="block">
                     @include('layouts.messages')
                         <div class="block-content">
-                            <form class="js-validation-material" action="{{url('post_auditee')}}" method="post" novalidate="novalidate">
+                            <form class="js-validation-material" action="" method="post" novalidate="novalidate">
                             @csrf
                                 <div class="p-10 h5 bg-earth-light text-center font-w700">PLOR Detail</div>
                                 <div class="form-group">
@@ -137,7 +137,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-alt-primary">Submit</button>
+                                    <a class="btn btn-alt-primary" data-toggle="modal" data-target="#modal-slideup"> Submit</a>
                                     <a href="/monitoring">
                                     <button type="button" class="btn btn-alt-secondary">Back</button>
                                     </a>
@@ -148,7 +148,22 @@
                 </div>
             </main>
             <!-- END Main Container -->
-
+            <div class="modal fade" id="modal-slideup" tabindex="-1" role="dialog" aria-labelledby="modal-slideup" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-slideup" role="document">
+                    <div class="modal-content">
+                        <div class="block block-themed block-transparent mb-0">
+                            <div class="block-content">
+                                <button type="button" class="btn btn-lg btn-circle btn-primary mr-5 mb-5 pull-right" data-dismiss="modal" aria-label="Close">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                                <p class="text-left">
+                                    <span class="font-w700 mr-5 font-size-h2 text-primary">Data telah terisi</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Footer -->
             <footer id="page-footer" class="bg-white">
                 @include('layouts.footer')

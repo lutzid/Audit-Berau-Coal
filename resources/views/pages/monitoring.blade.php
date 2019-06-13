@@ -26,7 +26,7 @@
                     @include('layouts.messages')
                         <div class="block-content">
                             <div class="table-responsive">
-                                <h5 class="col-0">Open: 2 Closed: 2</h2>
+                                <p class="h5 font-w700"><span class="bg-danger-light p-10"> Open : {{$open}}</span><span class="bg-success-light p-10"> Closed : {{$closed}}</span></p>
                                 <table class="table table-striped table-vcenter table-bordered">
                                     <thead>
                                         <tr class="bg-gd-earth text-white text-center font-w700 h6">
@@ -93,9 +93,9 @@
                                             </td>{{$plor->note}}<td>
                                             </td>
                                             @if($plor->statusFinal == 'Closed')
-                                            <td class="text-center bg-danger-light">
+                                            <td class="text-center bg-success-light">
                                             @else
-                                            <td class="text-center">
+                                            <td class="text-center bg-danger-light">
                                             @endif
                                                 <p class="font-w700">                                            
                                                     {{$plor->statusFinal}}

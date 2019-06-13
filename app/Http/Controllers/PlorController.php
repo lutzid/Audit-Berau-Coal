@@ -37,6 +37,9 @@ class PlorController extends Controller
     public function monitor()
     {
         $data['plors'] = Plor::where('status1', '=', 'Approved')->orderBy('id', 'asc')->paginate(5);
+        $data['open'] = Plor::where('statusFinal', '=', 'Open')->where('status1', '=', 'Approved')->count();
+        $data['closed'] = Plor::where('statusFinal', '=', 'Closed')->where('status1', '=', 'Approved')->count();
+        // dd($data['open']);
         return view('pages.monitoring', $data);
     }
 
