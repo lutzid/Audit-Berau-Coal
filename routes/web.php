@@ -88,3 +88,7 @@ Route::get('/uploadchecklist', function () {
 Route::get('/coba', function () {
 	return view('pages.coba');
 });
+
+Route::get('/laporanmonitoring', function () {
+	return view('pages.laporanmonitoring');
+});
