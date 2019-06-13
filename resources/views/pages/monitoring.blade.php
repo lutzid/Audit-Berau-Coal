@@ -25,7 +25,7 @@
                     <div class="block">
                     @include('layouts.messages')
                         <div class="block-header">
-                            <div><a class="btn btn-success" href="/laporanmonitoring"> Laporan</a></div>
+                            <div><a class="btn btn-success" href="/laporanmonitoring">Laporan</a></div>
                         </div>
                         <div class="block-content">
                             <div class="table-responsive">

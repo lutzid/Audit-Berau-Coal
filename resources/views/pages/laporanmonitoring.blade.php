@@ -24,6 +24,9 @@
                     <h2 class="content-heading font-w700">Laporan Monitoring Hasil Audit</h2>
                     <div class="block">
                     @include('layouts.messages')
+                        <div class="block-header">
+                            <div><a class="btn btn-success" href="/monitoring">Back</a></div>
+                        </div>
                         <div class="block-content">
                             <div class="table-responsive">
                                 <table class="table table-striped table-vcenter table-bordered">
