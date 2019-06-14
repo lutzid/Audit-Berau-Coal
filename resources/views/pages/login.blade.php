@@ -6,7 +6,7 @@
         @include('layouts.header')
         <style>
             #slide{
-                opacity : 0.5;
+                background-color: rgba(255, 255, 255, 0.7)
             }
         </style>
     </head>
@@ -28,7 +28,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center bg-white" data-toggle="appear" data-class="animated fadeInRight" id="slide">
+                        <div class="hero-static col-md-6 col-xl-4 d-flex align-items-center" data-toggle="appear" data-class="animated fadeInRight" id="slide">
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
