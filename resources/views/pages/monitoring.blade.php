@@ -24,6 +24,9 @@
                     <h2 class="content-heading font-w700">Monitoring Hasil Audit</h2>
                     <div class="block">
                     @include('layouts.messages')
+                        <div class="block-header">
+                            <div><a class="btn btn-success" href="/laporanmonitoring">Laporan</a></div>
+                        </div>
                         <div class="block-content">
                             <div class="table-responsive">
                                 <p class="h5 font-w700"><span class="bg-danger-light p-10"> Open : {{$open}}</span><span class="bg-success-light p-10"> Closed : {{$closed}}</span></p>
