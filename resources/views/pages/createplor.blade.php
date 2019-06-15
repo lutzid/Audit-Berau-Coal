@@ -155,6 +155,9 @@
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-alt-primary">Submit</button>
+                                    <a href="{{url('/plor')}}">
+                                    <button type="button" class="btn btn-alt-secondary">Back</button>
+                                    </a>
                                 </div>
                             </form>
                         </div>

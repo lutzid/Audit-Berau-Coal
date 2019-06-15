@@ -25,7 +25,7 @@
                     @include('layouts.messages')
                         <div class="block-header">
                         @if(session('user')->permit == 1)
-                            <div><a class="btn btn-success" href="/uploadlaporan"> Upload</a></div>
+                            <div><a class="btn btn-success" href="{{url('/uploadlaporan')}}"> Upload</a></div>
                         @endif
                         </div>
                         <div class="block-content">

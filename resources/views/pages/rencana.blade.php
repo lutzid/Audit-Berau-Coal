@@ -24,7 +24,7 @@
                         @include('layouts.messages')
                         <div class="block-header">
                             @if(session('user')->permit == 1)
-                            <div><a class="btn btn-success" href="/createrencana"> Create</a></div>
+                            <div><a class="btn btn-success" href="{{url('/createrencana')}}"> Create</a></div>
                             @endif
                         </div>
                         <div class="block-content">
@@ -58,14 +58,14 @@
                                                 @endif
                                                 @if(session('user')->status == 'Audit Manager' && $rencana->status == 'in Reviewer')
                                                 <center>
-                                                    <a href="/approverAM/{{$rencana->id}}" class="font-w700 btn btn-outline-info js-click-ripple-enabled">
+                                                    <a href="{{route('approverAM', $rencana->id)}}" class="font-w700 btn btn-outline-info js-click-ripple-enabled">
                                                         Approve
                                                     </a>
                                                 </center>
                                                 
                                                 @elseif(session('user')->status == 'Audit General Manager' && $rencana->status == 'in General Manager')
                                                 <center>
-                                                    <a href="/approverGM/{{$rencana->id}}" class="font-w700 btn btn-outline-info js-click-ripple-enabled">
+                                                    <a href="{{route('approverGM', $rencana->id)}}" class="font-w700 btn btn-outline-info js-click-ripple-enabled">
                                                         Approve
                                                     </a>
                                                 </center>

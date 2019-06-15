@@ -24,7 +24,7 @@
                     <div class="block">
                     @include('layouts.messages')
                         <div class="block-header">
-                            <div><a class="btn btn-success" href="/monitoring">Back</a></div>
+                            <div><a class="btn btn-success" href="{{url('/monitoring')}}">Back</a></div>
                         </div>
                         <div class="block-content">
                             <div class="table-responsive">

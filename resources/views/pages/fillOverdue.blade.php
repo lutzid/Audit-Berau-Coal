@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="form-group">
                                     <a class="btn btn-alt-primary" data-toggle="modal" data-target="#modal-slideup"> Submit</a>
-                                    <a href="/monitoring">
+                                    <a href="{{url('/monitoring')}}">
                                     <button type="button" class="btn btn-alt-secondary">Back</button>
                                     </a>
                                 </div>

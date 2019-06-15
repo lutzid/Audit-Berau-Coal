@@ -24,7 +24,7 @@
                     @include('layouts.messages')
                         <div class="block-header">
                             @if(session('user')->status == 'Audit Supervisor' || session('user')->status == 'Audit Superintendent')
-                            <div><a class="btn btn-success" href="/createplor"> Create</a></div>
+                            <div><a class="btn btn-success" href="{{url('/createplor')}}"> Create</a></div>
                             @endif
                         </div>
                         <div class="block-content">
@@ -78,10 +78,10 @@
                                             </td>
                                             @if(session('user')->name == $plor->approver && $plor->status1 != 'Approved')
                                             <td class="text-center">
-                                                <a href="/approvePlor/{{$plor->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                                <a href="{{route('approvePlor', $plor->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                     Approve
                                                 </a>
-                                                <a href="/editplor/{{$plor->id}}" class="btn btn-outline-secondary js-click-ripple-enabled">
+                                                <a href="{{route('editplor', $plor->id)}}" class="btn btn-outline-secondary js-click-ripple-enabled">
                                                     Edit
                                                 </a>
                                             </td>
