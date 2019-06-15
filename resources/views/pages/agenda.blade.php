@@ -26,7 +26,7 @@
                     @include('layouts.messages')
                         <div class="block-header">
                             @if(session('user')->permit == 1)
-                            <div><a class="btn btn-success" href="/createagenda"> Create</a></div>
+                            <div><a class="btn btn-success" href="{{url('/createagenda')}}"> Create</a></div>
                             @endif
                         </div>
                         <div class="block-content">
@@ -69,18 +69,18 @@
                                             </td>
                                             @if(session('user')->status == 'Audit Manager' && $agenda->status == 'in Reviewer')
                                             <td>
-                                            <a href="/approveAM/{{$agenda->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                            <a href="{{route('approveAM', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                 Approve
                                             </a>
                                             </td>
                                             @elseif(session('user')->status == 'Audit General Manager' && $agenda->status == 'in General Manager')
                                             <td>
-                                            <a href="/approveGM/{{$agenda->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                            <a href="{{route('approveGM', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                 Approve
                                             </a>
                                             @elseif((session('user')->status == 'Kepala Teknik Tambang' || session('user')->status == 'Wakil Kepala Teknik Tambang') && $agenda->status == 'in Approver' && $agenda->approver == session('user')->name)
                                             <td>
-                                            <a href="/approve/{{$agenda->id}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                            <a href="{{route('approve', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                 Approve
                                             </a>
                                             </td>

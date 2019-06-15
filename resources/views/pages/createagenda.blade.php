@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-alt-primary">Submit</button>
-                                    <a href="/agenda">
+                                    <a href="{{url('/agenda')}}">
                                     <button type="button" class="btn btn-alt-secondary">Back</button>
                                     </a>
                                 </div>
