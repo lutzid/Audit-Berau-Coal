@@ -3,7 +3,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
-        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="{{asset('js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
 
     </head>
     <body>
@@ -265,9 +265,9 @@
         </div>
 
         <!-- Page JS Plugins -->
-        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('js/rencana.js')}}"></script>

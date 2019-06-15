@@ -20,23 +20,23 @@
 
 <!-- Icons -->
 <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-<link rel="shortcut icon" href="{{asset('assets/codebase/assets/img/logos/logo.png')}}">
-<link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/codebase/assets/img/favicons/favicon-192x192.png')}}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/codebase/assets/img/favicons/apple-touch-icon-180x180.png')}}">
+<link rel="shortcut icon" href="{{asset('img/logo.png')}}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{asset('img/logo.png')}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{asset('img/logo.png')}}">
 <!-- END Icons -->
 
 <!-- Stylesheets -->
-<link rel="stylesheet" id="css-main" href="{{asset('assets/codebase/assets/css/codebase.min.css')}}">
-<link rel="stylesheet" id="css-theme" href="{{asset('assets/codebase/assets/css/themes/earth.min.css')}}">
+<link rel="stylesheet" id="css-main" href="{{asset('css/codebase.min.css')}}">
+<link rel="stylesheet" id="css-theme" href="{{asset('css/themes/earth.min.css')}}">
 <!-- END Stylesheets -->
 
 
 <!-- Codebase Core JS -->
-<script src="{{asset('assets/codebase/assets/js/core/jquery.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/core/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/core/jquery.slimscroll.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/core/jquery.scrollLock.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/core/jquery.appear.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/core/jquery.countTo.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/core/js.cookie.min.js')}}"></script>
-<script src="{{asset('assets/codebase/assets/js/codebase.js')}}"></script>
+<script src="{{asset('js/core/jquery.min.js')}}"></script>
+<script src="{{asset('js/core/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('js/core/jquery.slimscroll.min.js')}}"></script>
+<script src="{{asset('js/core/jquery.scrollLock.min.js')}}"></script>
+<script src="{{asset('js/core/jquery.appear.min.js')}}"></script>
+<script src="{{asset('js/core/jquery.countTo.min.js')}}"></script>
+<script src="{{asset('js/core/js.cookie.min.js')}}"></script>
+<script src="{{asset('js/codebase.js')}}"></script>

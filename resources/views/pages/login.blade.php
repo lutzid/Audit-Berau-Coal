@@ -85,7 +85,7 @@
         </div>
         <!-- END Page Container -->
         <!-- Page JS Plugins -->
-        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('js/signin.js')}}"></script>

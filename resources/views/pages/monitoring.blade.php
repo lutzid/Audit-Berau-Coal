@@ -3,8 +3,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
-        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
-
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">

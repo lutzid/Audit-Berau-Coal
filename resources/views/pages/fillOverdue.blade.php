@@ -3,7 +3,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
-        <link rel="stylesheet" href="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
+        <link rel="stylesheet" href="{{asset('js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">
@@ -170,7 +170,7 @@
             </footer>
             <!-- END Footer -->
         </div>
-        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
         <script>
             jQuery(function () {
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)

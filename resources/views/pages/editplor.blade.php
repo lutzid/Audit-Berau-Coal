@@ -3,9 +3,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
-        <link rel="stylesheet" href="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/codebase/assets/js/plugins/select2/select2.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/codebase/assets/js/plugins/select2/select2-bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
+        <link rel="stylesheet" href="{{asset('js/plugins/select2/select2.min.css')}}">
+        <link rel="stylesheet" href="{{asset('js/plugins/select2/select2-bootstrap.min.css')}}">
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">
@@ -171,9 +171,10 @@
         </div>
 
         <!-- Page JS Plugins -->
-        <script src="{{asset('assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
-        <script src="{{asset('assets/codebase/assets/js/plugins/select2/select2.full.min.js')}}"></script>
+        <script src="{{asset('js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('js/plugins/select2/select2.full.min.js')}}"></script>
+        
         <!-- Page JS Code -->
         <script src="{{asset('js/plor.js')}}"></script>
         <script>

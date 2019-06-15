@@ -3,7 +3,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
-        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="{{asset('js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
 
     </head>
     <body>
@@ -37,13 +37,13 @@
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker1" name="example-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <input type="text" class="js-datepicker form-control" id="example-datepicker1" name="example-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                                     <label for="example-datepicker1">From</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                                 <div class="form-material floating open">
-                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker1" name="end-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                                    <input type="text" class="js-datepicker form-control" id="end-datepicker1" name="end-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                                     <label for="end-datepicker1">To</label>
                                                 </div>
                                         </div>
@@ -55,6 +55,9 @@
                                         </div>
                                         <div class="form-group">
                                             <td><a class="btn btn-alt-primary" data-toggle="modal" data-target="#modal-slideup"> Submit</a></td>
+                                            <a href="/checklist">
+                                            <button type="button" class="btn btn-alt-secondary">Back</button>
+                                            </a>
                                         </div>
                                     </form>
                                 </div>
@@ -91,12 +94,12 @@
             </footer>
             <!-- END Footer -->
         </div>
-        <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
-        <!-- Page JS Plugins -->
-        <script src="assets/codebase/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
-        <script src="assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-        <script src="assets/codebase/assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
+        <script src="{{asset('js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js')}}"></script>
+        <script src="{{asset('js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/plugins/jquery-validation/additional-methods.min.js')}}"></script>
+        
         <script>
             jQuery(function () {
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)

@@ -3,9 +3,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.header')
-        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
-        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/select2/select2.min.css">
-        <link rel="stylesheet" href="assets/codebase/assets/js/plugins/select2/select2-bootstrap.min.css">
+        <link rel="stylesheet" href="{{asset('js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
+        <link rel="stylesheet" href="{{asset('js/plugins/select2/select2.min.css')}}">
+        <link rel="stylesheet" href="{{asset('js/plugins/select2/select2-bootstrap.min.css')}}">
     </head>
     <body>
         <div id="page-container" class="page-header-fixed page-header main-content-boxed side-trans-enabled sidebar-o">
@@ -107,6 +107,9 @@
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-alt-primary">Submit</button>
+                                    <a href="/agenda">
+                                    <button type="button" class="btn btn-alt-secondary">Back</button>
+                                    </a>
                                 </div>
                             </form>
                         </div>
@@ -123,19 +126,19 @@
         </div>
 
         <!-- Page JS Plugins -->
-        <script src="assets/codebase/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-        <script src="assets/codebase/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-        <script src="assets/codebase/assets/js/plugins/select2/select2.full.min.js"></script>
+        <script src="{{asset('js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('js/plugins/select2/select2.full.min.js')}}"></script>
+
+        <!-- Page JS Code -->
+        <script src="{{asset('js/agenda.js')}}"></script>
+
         <script>
             jQuery(function () {
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
                 Codebase.helpers(['datepicker', 'select2']);
             });
         </script>
-
-        <!-- Page JS Code -->
-        <script src="{{asset('js/agenda.js')}}"></script>
-
 
     </body>
 </html>
