@@ -78,10 +78,10 @@
                                             </td>
                                             @if(session('user')->name == $plor->approver && $plor->status1 != 'Approved')
                                             <td class="text-center">
-                                                <a href="{{route('approvePlor', $plor->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                                <a href="{{url('approvePlor', $plor->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                     Approve
                                                 </a>
-                                                <a href="{{route('editplor', $plor->id)}}" class="btn btn-outline-secondary js-click-ripple-enabled">
+                                                <a href="{{url('editplor', $plor->id)}}" class="btn btn-outline-secondary js-click-ripple-enabled">
                                                     Edit
                                                 </a>
                                             </td>

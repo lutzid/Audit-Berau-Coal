@@ -73,7 +73,7 @@
                                                     Show
                                                 </a>
                                                 @if(session('user')->status == 'Auditee')
-                                                <a href="{{route('fillAuditee', $plor->id)}}" class="btn btn-outline-primary">Fill</a>
+                                                <a href="{{url('fillAuditee', $plor->id)}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
                                             </td>
                                             <td class="text-center">
@@ -81,7 +81,7 @@
                                                 {{$plor->status2}}
                                                 </p>
                                                 @if((session('user')->username == 'pjo' || session('user')->username == 'depthead' ) && $plor->status2 != 'Approved')
-                                                <a href="{{route('approvePJO', $plor->id)}}" class="btn btn-outline-primary">Approve</a>
+                                                <a href="{{url('approvePJO', $plor->id)}}" class="btn btn-outline-primary">Approve</a>
                                                 @endif
                                             </td>
                                             <td class="text-center">
@@ -89,7 +89,7 @@
                                                     Show
                                                 </a>
                                                 @if(session('user')->status == 'Auditee')
-                                                <a href="{{route('fillOverdue', $plor->id)}}" class="btn btn-outline-primary">Fill</a>
+                                                <a href="{{url('fillOverdue', $plor->id)}}" class="btn btn-outline-primary">Fill</a>
                                                 @endif
                                             </td>{{$plor->note}}<td>
                                             </td>
@@ -102,7 +102,7 @@
                                                     {{$plor->statusFinal}}
                                                 </p>
                                                 @if((session('user')->status == 'Audit Supervisor' || session('user')->status == 'Audit Superintendent') && $plor->statusFinal != 'Closed')
-                                                <a href="{{route('approveFinal', $plor->id)}}" class="btn btn-outline-primary">Approve</a>
+                                                <a href="{{url('approveFinal', $plor->id)}}" class="btn btn-outline-primary">Approve</a>
                                                 @endif
                                             </td>
                                         </tr>

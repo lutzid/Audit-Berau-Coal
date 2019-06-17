@@ -69,18 +69,18 @@
                                             </td>
                                             @if(session('user')->status == 'Audit Manager' && $agenda->status == 'in Reviewer')
                                             <td>
-                                            <a href="{{route('approveAM', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                            <a href="{{url('approveAM', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                 Approve
                                             </a>
                                             </td>
                                             @elseif(session('user')->status == 'Audit General Manager' && $agenda->status == 'in General Manager')
                                             <td>
-                                            <a href="{{route('approveGM', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                            <a href="{{url('approveGM', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                 Approve
                                             </a>
                                             @elseif((session('user')->status == 'Kepala Teknik Tambang' || session('user')->status == 'Wakil Kepala Teknik Tambang') && $agenda->status == 'in Approver' && $agenda->approver == session('user')->name)
                                             <td>
-                                            <a href="{{route('approve', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
+                                            <a href="{{url('approve', $agenda->id)}}" class="btn btn-outline-info js-click-ripple-enabled">
                                                 Approve
                                             </a>
                                             </td>
